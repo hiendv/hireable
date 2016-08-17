@@ -4,7 +4,7 @@
   "description": "A badge for jobs profile",
   "main": "src/index.js",
   "scripts": {
-    "start": "nodemon src/index.js --exec 'npm run lint && babel-node'",
+    "dev": "nodemon src/index.js --exec 'npm run lint && babel-node'",
     "build": "npm run lint && babel src -d build",
     "serve": "node build/index.js",
     "test": "mocha --compilers js:babel-register",
@@ -17,6 +17,7 @@
     "node": ">=4.2.0"
   },
   "dependencies": {
+    "dotenv": "^2.0.0",
     "koa": "^1.2.1"
   },
   "devDependencies": {
