@@ -4,10 +4,10 @@
   "description": "A badge for jobs profile",
   "main": "src/index.js",
   "scripts": {
-    "test": "mocha --compilers js:babel-register",
-    "start": "nodemon src/index.js --exec babel-node",
-    "build": "babel src -d build",
+    "start": "nodemon src/index.js --exec 'npm run lint && babel-node'",
+    "build": "npm run lint && babel src -d build",
     "serve": "node build/index.js",
+    "test": "mocha --compilers js:babel-register",
     "lint": "eslint --ext .js src"
   },
   "author": "hiendv <neo.go.vn@gmail.com>",
