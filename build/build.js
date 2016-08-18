@@ -3,7 +3,7 @@ var path = require('path')
 var fs = require('fs')
 var archiver = require('archiver')
 
-var name = path.join(__dirname, 'v' + pkg.version + '.zip')
+var name = path.join(__dirname, pkg.name + '-v' + pkg.version + '.zip')
 var output = fs.createWriteStream(name)
 var archive = archiver('zip')
 
