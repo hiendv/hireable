@@ -3,7 +3,7 @@ export default {
     if (this.$env.APP_URL) {
       return this.$env.APP_URL + '/' + src
     }
-    return src
+    return '/' + src
   },
   show (id, repo) {
     return this.$app.github.users(id)
