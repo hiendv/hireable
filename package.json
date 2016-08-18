@@ -1,7 +1,7 @@
 {
   "name": "hireable",
-  "version": "0.1.0",
-  "description": "A badge for jobs profile",
+  "version": "0.2.0",
+  "description": "Available-for-hire badge",
   "main": "src/index.js",
   "scripts": {
     "dev": "nodemon src/index.js --exec 'npm run lint && babel-node'",
