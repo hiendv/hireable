@@ -5,7 +5,7 @@
   "main": "lib/index.js",
   "scripts": {
     "dev": "nodemon src/index.js --exec 'npm run lint && babel-node'",
-    "build": "rimraf lib/* && babel src -d lib",
+    "build": "rimraf lib/* && babel src -d lib && node build/build.js",
     "serve": "node lib/index.js",
     "test": "mocha --compilers js:babel-register",
     "lint": "eslint --ext .js src"
