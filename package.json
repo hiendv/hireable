@@ -2,14 +2,15 @@
   "name": "hireable",
   "version": "0.1.0",
   "description": "Available-for-hire badge",
-  "main": "src/index.js",
+  "main": "lib/index.js",
   "scripts": {
     "dev": "nodemon src/index.js --exec 'npm run lint && babel-node'",
-    "build": "babel src -d build",
-    "serve": "node build/index.js",
+    "build": "rimraf lib/* && babel src -d lib",
+    "serve": "node lib/index.js",
     "test": "mocha --compilers js:babel-register",
-    "lint": "eslint --ext .js src"
+    "lint": "eslint --ext .js src",
   },
+  "private": true,
   "author": "hiendv <neo.go.vn@gmail.com>",
   "license": "MIT",
   "engineStrict": true,
@@ -17,6 +18,7 @@
     "node": ">=4.2.0"
   },
   "dependencies": {
+    "babel-runtime": "^6.11.6",
     "dotenv": "^2.0.0",
     "koa": "^1.2.1",
     "koa-route": "^2.4.2",

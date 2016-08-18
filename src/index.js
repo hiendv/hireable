@@ -8,7 +8,7 @@ import Route from 'koa-route'
 import Serve from 'koa-static'
 
 import Octokat from 'octokat'
-import Badge from './lib/Badge'
+import Badge from './Badge'
 
 const app = new Koa()
 

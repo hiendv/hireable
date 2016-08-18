@@ -12,8 +12,8 @@ node_modules
 # Optional npm cache directory
 .npm
 
-# Build
-build
-
 # dotenv
 .env
+
+# Compiled
+lib
