@@ -8,7 +8,7 @@
     "test": "mocha --compilers js:babel-register",
     "lint": "eslint --ext .js src",
     "serve": "node lib/index.js",
-    "build": "rimraf lib/* && babel src -d lib && node build/build.js",
+    "build": "rimraf lib/* && babel src -d lib && node build/build.js"
   },
   "private": true,
   "author": "hiendv <neo.go.vn@gmail.com>",
