@@ -16,4 +16,4 @@ indent_style = space
 [*.{md,markdown}]
 indent_style = space
 indent_size = 2
-trim_trailing_whitespace = true
+trim_trailing_whitespace = false

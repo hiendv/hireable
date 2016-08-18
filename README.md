@@ -30,9 +30,14 @@ git clone https://github.com/hiendv/hireable.git && cd hireable
 npm install --production
 cp .env.example .env && vim .env
 npm run build && npm run serve
+# Go to http://localhost:1406
 
 ```
-
+## Testing
+PRs are welcome !
+```bash
+npm test
+```
 
 ## Contributions are welcome
 ```bash
