@@ -35,3 +35,4 @@ app.use(Route.get('/:user/:repo?', function * show (id, repo) {
 
 app.listen(process.env.APP_PORT)
 console.log('Listening on :' + process.env.APP_PORT)
+console.log('Visit: http://localhost:' + process.env.APP_PORT)
