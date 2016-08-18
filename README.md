@@ -28,6 +28,7 @@ A: Should or shouldn't ? You tell me :thumbsup:
 ```bash
 # Unzip
 unzip hireable-v*.zip -d hireable && cd hireable
+
 # Dependencies
 npm install --production
 
