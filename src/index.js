@@ -23,7 +23,6 @@ app.use(Serve(path.join(__dirname, '../public'), {
   maxage: 31536000000
 }))
 
-
 app.use(Route.get('/', function * () {
   this.body = 'Hireable v' + version
 }))
