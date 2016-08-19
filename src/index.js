@@ -27,6 +27,10 @@ app.use(Route.get('/', function * () {
   this.body = 'Hireable v' + version
 }))
 
+app.use(Route.get('/p/:user', function * (user) {
+  this.redirect('https://github.com/' + user)
+}))
+
 app.use(Route.get('/:user/:repo?', function * show (id, repo) {
   yield Badge.show(id, repo).then(src => {
     this.redirect(src)
