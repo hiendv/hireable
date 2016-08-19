@@ -1,5 +1,5 @@
 # hireable
-Available-for-hire badge written in nodejs
+Available-for-hire badge built with [Koa framework](https://github.com/koajs/koa)
 
 [![](https://hireable.0x1115.org/hiendv)](https://hireable.0x1115.org/p/hiendv)
 ```
