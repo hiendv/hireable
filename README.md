@@ -5,6 +5,8 @@ Available-for-hire badge built with [Koa framework](https://github.com/koajs/koa
 ```
 [![](https://hireable.0x1115.org/hiendv)](https://hireable.0x1115.org/p/hiendv)
 ```
+*Sorry for the long domain, couldn't afford a short one* :dollar:
+
 ## But why?
 Some of my friends want to embed the employment status into their open-source projects.
 But it takes too much time and effort to keep these information up-to-date across your projects.  
@@ -56,6 +58,7 @@ GITHUB_TOKEN=PersonalAccessToken
 ```
 
 ## Development
+- C'mon, give it a :star:. Thank you :laughing:
 ```bash
 git clone https://github.com/hiendv/hireable.git && cd hireable
 npm install
