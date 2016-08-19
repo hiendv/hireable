@@ -10,9 +10,6 @@ let Badge = function (app, env) {
 }
 
 Badge.prototype.draw = function (src) {
-  if (this.$env.APP_URL) {
-    return this.$env.APP_URL + '/' + src
-  }
   return '/' + src
 }
 

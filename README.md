@@ -48,11 +48,8 @@ Configurations are defined in `.env` file.
 # Application port
 APP_PORT=1406
 
-# Where static files are hosted
-APP_URL=
-
-# Cache. Leave it null or 0 to disable (null: APP_CACHE=)
-APP_CACHE=1000
+# Cache expiration in ms. Leave it null to disable
+APP_CACHE=
 
 # GitHub personal access token. See https://github.com/settings/tokens
 GITHUB_TOKEN=PersonalAccessToken
