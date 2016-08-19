@@ -2,6 +2,7 @@ require('dotenv').config()
 
 import {version} from '../package.json'
 import path from 'path'
+import crypto from 'crypto'
 
 import Koa from 'koa'
 import Route from 'koa-route'
@@ -20,7 +21,7 @@ const badge = new Badge(app.context, process.env)
 
 app.use(Serve(path.join(__dirname, '../public'), {
   gzip: true,
-  maxage: 31536000000
+  maxage: 0
 }))
 
 app.use(Route.get('/', function * () {
@@ -33,8 +34,11 @@ app.use(Route.get('/p/:user', function * (user) {
 
 app.use(Route.get('/:user/:repo?', function * show (id, repo) {
   yield badge.show(id, repo).then(src => {
+    this.body = null
+    this.response.etag = crypto.createHash('md5').update(src).digest('hex')
     this.set('Cache-Control', 'no-cache, no-store, must-revalidate')
     this.redirect(src)
+    this.status = 301
   })
 }))
 
