@@ -23,9 +23,6 @@ No on-the-fly generated badges for now, I guess. They are all pre-generated.
 - Q: **How do you know when I'm hireable?**  
 A: Your [GitHub jobs profile](https://github.com/settings/profile#user_profile_hireable)
 
-- Q: **CDN?**  
-A: Not sure if the badges need CDN. GitHub routes images through **camo** proxy. 
-
 ## Quickstart Installation
 - Download the latest release [here](https://github.com/hiendv/hireable/releases)
 ```bash
