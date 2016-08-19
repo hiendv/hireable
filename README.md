@@ -2,7 +2,9 @@
 Available-for-hire badge written in nodejs
 
 [![](https://hireable.0x1115.org/hiendv)](https://hireable.0x1115.org/p/hiendv)
-
+```
+[![](https://hireable.0x1115.org/hiendv)](https://hireable.0x1115.org/p/hiendv)
+```
 ## But why?
 Some of my friends want to embed the employment status into their open-source projects.
 But it takes too much time and effort to keep these information up-to-date across your projects.  
