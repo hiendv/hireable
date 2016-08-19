@@ -19,6 +19,7 @@ app.context.github = new Octokat({
 const badge = new Badge(app.context, process.env)
 
 app.use(Serve(path.join(__dirname, '../public'), {
+  gzip: true,
   maxage: 31536000000
 }))
 
@@ -32,6 +33,7 @@ app.use(Route.get('/p/:user', function * (user) {
 
 app.use(Route.get('/:user/:repo?', function * show (id, repo) {
   yield badge.show(id, repo).then(src => {
+    this.set('Cache-Control', 'no-cache, no-store, must-revalidate')
     this.redirect(src)
   })
 }))
