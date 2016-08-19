@@ -16,8 +16,7 @@ app.context.github = new Octokat({
   token: process.env.GITHUB_TOKEN
 })
 
-Badge.$app = app.context
-Badge.$env = process.env
+const badge = new Badge(app.context, process.env)
 
 app.use(Serve(path.join(__dirname, '../public'), {
   maxage: 31536000000
@@ -32,7 +31,7 @@ app.use(Route.get('/p/:user', function * (user) {
 }))
 
 app.use(Route.get('/:user/:repo?', function * show (id, repo) {
-  yield Badge.show(id, repo).then(src => {
+  yield badge.show(id, repo).then(src => {
     this.redirect(src)
   })
 }))
