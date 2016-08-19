@@ -1,6 +1,8 @@
 # hireable
 Available-for-hire badge written in nodejs
 
+[![](https://hireable.0x1115.org/hiendv)](https://hireable.0x1115.org/p/hiendv)
+
 ## But why?
 Some of my friends want to embed the employment status into their open-source projects.
 But it takes too much time and effort to keep these information up-to-date across your projects.  
@@ -20,9 +22,6 @@ A: Your [GitHub jobs profile](https://github.com/settings/profile#user_profile_h
 - Q: **CDN?**  
 A: Not sure if the badges need CDN. GitHub routes images through **camo** proxy. 
 
-- Q: **Cache?**  
-A: Should or shouldn't ? You tell me :thumbsup:
-
 ## Quickstart Installation
 - Download the latest release [here](https://github.com/hiendv/hireable/releases)
 ```bash
@@ -32,13 +31,29 @@ unzip hireable-v*.zip -d hireable && cd hireable
 # Dependencies
 npm install --production
 
-# Config
+# Config. See #configurations
 vim .env
 
 # Serve
 npm run serve
 
 # Or even better with pm2 or forever
+```
+
+## Configurations
+Configurations are defined in `.env` file.
+```
+# Application port
+APP_PORT=1406
+
+# Where static files are hosted
+APP_URL=
+
+# Cache. Leave it null or 0 to disable (null: APP_CACHE=)
+APP_CACHE=1000
+
+# GitHub personal access token. See https://github.com/settings/tokens
+GITHUB_TOKEN=PersonalAccessToken
 ```
 
 ## Development
