@@ -29,7 +29,7 @@ app.use(Route.get('/p/:user', function * (user) {
 app.use(Route.get('/:user/:repo?', function * show (id, repo) {
   let source
   yield badge.show(id, repo).then(src => {
-    this.set('etag', crypto.createHash('md5').update(src).digest('hex'))
+    this.set('ETag', crypto.createHash('md5').update(src).digest('hex'))
     this.set('Cache-Control', 'private')
     source = src
   })
