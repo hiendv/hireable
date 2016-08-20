@@ -25,7 +25,7 @@ Changelog entries are classified using the following labels _(from [keep-a-chang
 
 ### Removed
 - APP_URL
-- Static `/public
+- Static `/public`
 
 ### Fixed
 - Documentation (README)
