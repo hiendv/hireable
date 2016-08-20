@@ -1,7 +1,6 @@
 # Changelog
 
-## key
-
+## Keep a CHANGELOG
 Changelog entries are classified using the following labels _(from [keep-a-changelog][]_):
 
 - `added`: for new features
@@ -11,7 +10,6 @@ Changelog entries are classified using the following labels _(from [keep-a-chang
 - `fixed`: for any bug fixes
 
 ## Unreleased
-
 ### Changed
 - Some improvements in README
     - Built with Koa
