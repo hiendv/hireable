@@ -2,10 +2,13 @@
 Available-for-hire badge built with [Koa framework](https://github.com/koajs/koa)
 
 [![](https://hireable.0x1115.org/hiendv)](https://hireable.0x1115.org/p/hiendv)
+
 ```
-[![](https://hireable.0x1115.org/hiendv)](https://hireable.0x1115.org/p/hiendv)
+[![](https://hireable.0x1115.org/<username>)](https://hireable.0x1115.org/p/<username>)
 ```
-*Sorry for the long domain, couldn't afford a short one* :dollar:
+*`<username>` is a GitHub username*
+
+Sorry for the long domain, couldn't afford a short one :dollar:
 
 ## But why?
 Some of my friends want to embed the employment status into their open-source projects.
