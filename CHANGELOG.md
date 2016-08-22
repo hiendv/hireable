@@ -9,7 +9,7 @@ Changelog entries are classified using the following labels _(from [keep-a-chang
 - `removed`: for deprecated features removed in this release
 - `fixed`: for any bug fixes
 
-## Unreleased
+## [0.1.2] - 2016-08-23
 ### Changed
 - Some improvements in README
     - Built with Koa
@@ -24,7 +24,7 @@ Changelog entries are classified using the following labels _(from [keep-a-chang
 - Cache-Control & ETag header
 
 ### Removed
-- APP_URL
+- `APP_URL`
 - Static `/public`
 
 ### Fixed
