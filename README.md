@@ -1,10 +1,10 @@
 # hireable
 Available-for-hire badge built with [Koa framework](https://github.com/koajs/koa)
 
-[![Are hiendv available for hire?](https://hireable.0x1115.org/hiendv)](https://hireable.0x1115.org/p/hiendv)
+[![Is hiendv available for hire?](https://hireable.0x1115.org/hiendv)](https://hireable.0x1115.org/p/hiendv)
 
 ```
-[![Are <username> available for hire?](https://hireable.0x1115.org/<username>)](https://hireable.0x1115.org/p/<username>)
+[![Is <username> available for hire?](https://hireable.0x1115.org/<username>)](https://hireable.0x1115.org/p/<username>)
 ```
 *`<username>` is a GitHub username*
 
