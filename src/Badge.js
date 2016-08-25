@@ -31,11 +31,14 @@ Badge.prototype._show = function (id, repo) {
   .fetch()
   .then(user => {
     if (user.hireable) {
+      download('https://img.shields.io/badge/hireable-yes-green.svg', './public/hireable-yes.svg')
       return 'hireable-yes.svg'
     }
+    download('https://img.shields.io/badge/hireable-no-yellow.svg', './public/hireable-no.svg')
     return 'hireable-no.svg'
   })
   .catch(e => {
+    download('https://img.shields.io/badge/hireable-error-lightgrey.svg', './public/hireable-error.svg')
     return 'hireable-error.svg'
     // console.log(e.json ? e.json.message : e.message, e.status)
   })
