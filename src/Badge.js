@@ -1,4 +1,8 @@
 import Cache from 'memoizee'
+
+var https = require('https');
+var fs = require('fs');
+
 let Badge = function (app, env) {
   this.$app = app
   this.$env = env
