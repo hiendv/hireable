@@ -9,6 +9,19 @@ let Badge = function (app, env) {
   }
 }
 
+let download = function(url, dest, cb) {
+  let file = fs.createWriteStream('./public/temp.txt');
+  let request = https.get(url, function(response) {
+    response.pipe(file);
+    fs.rename('./public/temp.txt',dest, function(err) {
+            if (err) console.log('ERROR: ' + err);
+    });
+  }).on('error', function(err) {
+    fs.unlink(dest);
+    if (cb) cb(err.message);
+  });
+};
+
 Badge.prototype.draw = function (src) {
   return '/' + src
 }
