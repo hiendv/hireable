@@ -10,8 +10,13 @@ Changelog entries are classified using the following labels _(from [keep-a-chang
 - `fixed`: for any bug fixes
 
 ## [Unreleased]
+### Added
+- TravisCI
+- Some tests
+
 ### Changed
 - Move `public` into `src/assets` because badges are no longer served in public due to [v0.1.1]
+- Change the build script due to the above reason
 
 ## [v0.1.2] - 2016-08-23
 ### Changed
