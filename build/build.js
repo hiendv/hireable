@@ -19,7 +19,6 @@ archive.pipe(output)
 
 archive
   .directory(path.join(__dirname, '../lib/'), 'lib')
-  .directory(path.join(__dirname, '../src/assets/'), 'lib/assets')
   .file(path.join(__dirname, '../package.json'), {name: 'package.json'})
   .file(path.join(__dirname, '../.env.example'), {name: '.env'})
   .file(path.join(__dirname, '../README.md'), {name: 'README.md'})
