@@ -33,7 +33,9 @@ app.use(Route.get('/:user/:repo?', function * show (id, repo) {
     this.set('Cache-Control', 'private')
     source = src
   })
-  yield Send(this, './public/' + source)
+  yield Send(this, './assets/' + source, {
+    root: __dirname
+  })
 }))
 
 app.listen(process.env.APP_PORT)
