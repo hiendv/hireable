@@ -1,4 +1,6 @@
 # hireable
+[![Build Status](https://travis-ci.org/hiendv/hireable.svg?branch=master)](https://travis-ci.org/hiendv/hireable)
+
 Available-for-hire badge built with [Koa framework](https://github.com/koajs/koa)
 
 [![Is hiendv available for hire?](https://hireable.0x1115.org/hiendv)](https://hireable.0x1115.org/p/hiendv)
