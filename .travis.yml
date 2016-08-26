@@ -1,8 +1,12 @@
 language: node_js
 node_js:
-    - "4.2.0"
-    - "5"
-    - "6"
-    - "node"
+- 4.2.0
+- '5'
+- '6'
+- node
 before_script:
-  - cp .env.example .env
+- cp .env.example .env
+notifications:
+  email: false
+  slack:
+    secure: m8Wadm6K2dG/msMtIEExfAgLhy102YyXBVUkHKq8/0dIpBVcbg3KU1pWXVFSQ8FxsExvKCedb9CDE8u/jDyBLvsOCPc9QBdsEf95FSXWci7xzPN0PgVljoZ8Wfk8m0zMPJx+A9d2H/SfSDXENEryVk//C/+oUB1IxDHt8wHccxi4T+ot6kcA05OhKcYlS32tNEUcTuYMppPmMe4I3B9wiwMSDSb4cwT+KfkrBW4l/1kA6chJoyfQcrqWr0duovq9EOmkPjqhWLtClD8+2jx/joK9fvhtFRc/d9WZFXc2DXjtXnDNh4l1bIaAbGa9646Ji1ql2R1aDMaAiwrvzaD8XQqSwB3kNmTbJksLlb75na9tdE59g1Y/uNLjt7ScnXF+udDWHGqRuGVQcDkWpjBb6nTABjSi+pA+IMgfVwJr11NnDEbQRznEkE5z2TRshto7lcG/105DDPXIHTLQ8jZJtOe83BXOd/6YUMSeZMTlYPHV5tgVgOeXYdxxwulFIKBh/VUA1mF1QOva/kAGTDX3eVEoecbnP47pge1isFgZkE9Y8nz8XfGNhp5Oouw98awwxCqhlBzHf2kfoO/Nh6jTlKzbiou1NuLoUjLmG5A0+LQEaRwvwIt9w/X84cW+v/vMn6olJ3TBrx/xtvMh6njLUEf1phtWMAR6hOFOB02vYcY=
