@@ -9,7 +9,11 @@ Changelog entries are classified using the following labels _(from [keep-a-chang
 - `removed`: for deprecated features removed in this release
 - `fixed`: for any bug fixes
 
-## [0.1.2] - 2016-08-23
+## [Unreleased]
+### Changed
+- Move `public` into `src/assets` because badges are no longer served in public due to [v0.1.1]
+
+## [v0.1.2] - 2016-08-23
 ### Changed
 - Some improvements in README
     - Built with Koa
@@ -18,7 +22,7 @@ Changelog entries are classified using the following labels _(from [keep-a-chang
     - Add `Cache expiration` to FAQ
 - Normalize headers: `etag` to `ETag`
 
-## [0.1.1] - 2016-08-19
+## [v0.1.1] - 2016-08-19
 ### Added
 - koa-send
 - Cache-Control & ETag header
@@ -31,11 +35,12 @@ Changelog entries are classified using the following labels _(from [keep-a-chang
 - Documentation (README)
 - GitHub's camo proxy caching problem by sending badges directly instead of redirection to `/public`
 
-## [0.1.0] - 2016-08-19
+## [v0.1.0] - 2016-08-19
 ### Added
 - First release.
 
-[Unreleased]: https://github.com/hiendv/hireable/compare/v0.1.1...HEAD
+[Unreleased]: https://github.com/hiendv/hireable/compare/v0.1.2...HEAD
+[v0.1.2]: https://github.com/hiendv/hireable/compare/v0.1.1...v0.1.2
 [v0.1.1]: https://github.com/hiendv/hireable/compare/v0.1.0...v0.1.1
 
 [keep-a-changelog]: https://github.com/olivierlacan/keep-a-changelog
