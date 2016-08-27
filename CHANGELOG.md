@@ -9,7 +9,7 @@ Changelog entries are classified using the following labels _(from [keep-a-chang
 - `removed`: for deprecated features removed in this release
 - `fixed`: for any bug fixes
 
-## [Unreleased]
+## [v0.1.3] - 2016-08-27
 ### Added
 - TravisCI
 - Some tests
@@ -44,7 +44,8 @@ Changelog entries are classified using the following labels _(from [keep-a-chang
 ### Added
 - First release.
 
-[Unreleased]: https://github.com/hiendv/hireable/compare/v0.1.2...HEAD
+[Unreleased]: https://github.com/hiendv/hireable/compare/v0.1.3...HEAD
+[v0.1.3]: https://github.com/hiendv/hireable/compare/v0.1.2...v0.1.3
 [v0.1.2]: https://github.com/hiendv/hireable/compare/v0.1.1...v0.1.2
 [v0.1.1]: https://github.com/hiendv/hireable/compare/v0.1.0...v0.1.1
 
