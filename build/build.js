@@ -22,4 +22,5 @@ archive
   .file(path.join(__dirname, '../package.json'), {name: 'package.json'})
   .file(path.join(__dirname, '../.env.example'), {name: '.env'})
   .file(path.join(__dirname, '../README.md'), {name: 'README.md'})
+  .file(path.join(__dirname, '../CHANGELOG.md'), {name: 'CHANGELOG.md'})
   .finalize()
