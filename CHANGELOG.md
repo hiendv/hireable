@@ -9,6 +9,13 @@ Changelog entries are classified using the following labels _(from [keep-a-chang
 - `removed`: for deprecated features removed in this release
 - `fixed`: for any bug fixes
 
+## [Unreleased]
+### Changed
+- Drop `:repo` from `/:user` route
+- Move `GitHub` and `Cache` into separated modules
+- Pass the whole user object to Promise result from `Badge.show` instead of badge `src`
+- Refactor Badge & main modules. Move services into Badge
+
 ## [v0.1.3] - 2016-08-27
 ### Added
 - TravisCI
