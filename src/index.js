@@ -7,33 +7,10 @@ import Koa from 'koa'
 import Route from 'koa-route'
 import Send from 'koa-send'
 
-import Cache from './Cache'
-import GitHub from './GitHub'
 import Badge from './Badge'
 
 const app = new Koa()
-
-/**
- * Service Container
- */
-
-/**
- * ctx.$cache
- * @type {Cache}
- */
-app.context.cache = new Cache({
-  age: parseInt(process.env.APP_CACHE)
-})
-
-/**
- * ctx.$github
- * @type {Octokat}
- */
-app.context.github = new GitHub({
-  token: process.env.GITHUB_TOKEN
-})
-
-const badge = new Badge(app.context, process.env)
+const badge = new Badge()
 
 app.use(Route.get('/', function * () {
   this.body = 'Hireable v' + version
@@ -55,7 +32,6 @@ app.use(Route.get('/:user', function * show (username) {
   yield Send(this, './assets/' + source, {
     root: __dirname
   })
-
 }))
 
 app.listen(process.env.APP_PORT)
