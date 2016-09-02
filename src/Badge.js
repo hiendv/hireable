@@ -1,32 +1,51 @@
-import Cache from 'memoizee'
+'use strict'
+
+/**
+ * @param  {String} username
+ * @return {Promise}
+ */
+let _user = function (username) {
+  return this.$app.github.users(username).fetch()
+}
+
+/**
+ * @param  {String} username
+ * @return {Promise}
+ */
+let _show = function (username) {
+  return _user.call(this, username).then(user => {
+    return {
+      id: user.id,
+      username: user.login,
+      hireable: user.hireable,
+      badge: user.hireable ? 'hireable-yes.svg' : 'hireable-no.svg'
+    }
+  })
+  .catch(e => {
+    return {
+      error: e.status,
+      message: e.json ? e.json.message : e.message,
+      badge: 'hireable-error.svg'
+    }
+  })
+}
+
+let _init = function () {
+  // No need to check whether caching is disabled or not
+  this.show = this.$app.cache.rememberFunction(_show)
+}
+
 let Badge = function (app, env) {
   this.$app = app
   this.$env = env
-  if (this.$env.APP_CACHE) {
-    this.show = Cache(this._show, { maxAge: this.$env.APP_CACHE, promise: true })
-  } else {
-    this.show = this._show
+  _init.call(this)
+}
+
+Badge.prototype = {
+  show (username) {
+    // Default
+    _show.call(this, username)
   }
-}
-
-Badge.prototype.draw = function (src) {
-  return '/' + src
-}
-
-Badge.prototype._show = function (id, repo) {
-  return this.$app.github.users(id)
-  .fetch()
-  .then(user => {
-    if (user.hireable) {
-      return 'hireable-yes.svg'
-    }
-    return 'hireable-no.svg'
-  })
-  .catch(e => {
-    return 'hireable-error.svg'
-    // console.log(e.json ? e.json.message : e.message, e.status)
-  })
-  .then(src => this.draw(src))
 }
 
 export default Badge

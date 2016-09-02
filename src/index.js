@@ -7,12 +7,29 @@ import Koa from 'koa'
 import Route from 'koa-route'
 import Send from 'koa-send'
 
-import Octokat from 'octokat'
+import Cache from './Cache'
+import GitHub from './GitHub'
 import Badge from './Badge'
 
 const app = new Koa()
 
-app.context.github = new Octokat({
+/**
+ * Service Container
+ */
+
+/**
+ * ctx.$cache
+ * @type {Cache}
+ */
+app.context.cache = new Cache({
+  age: parseInt(process.env.APP_CACHE)
+})
+
+/**
+ * ctx.$github
+ * @type {Octokat}
+ */
+app.context.github = new GitHub({
   token: process.env.GITHUB_TOKEN
 })
 
@@ -26,18 +43,22 @@ app.use(Route.get('/p/:user', function * (user) {
   this.redirect('https://github.com/' + user)
 }))
 
-app.use(Route.get('/:user/:repo?', function * show (id, repo) {
+app.use(Route.get('/:user', function * show (username) {
   let source
-  yield badge.show(id, repo).then(src => {
-    this.set('ETag', crypto.createHash('md5').update(src).digest('hex'))
+
+  yield badge.show(username).then(user => {
+    this.set('ETag', crypto.createHash('md5').update(JSON.stringify(user)).digest('hex'))
     this.set('Cache-Control', 'private')
-    source = src
+    source = user.badge
   })
+
   yield Send(this, './assets/' + source, {
     root: __dirname
   })
+
 }))
 
 app.listen(process.env.APP_PORT)
+
 console.log('Listening on :' + process.env.APP_PORT)
 console.log('Visit http://localhost:' + process.env.APP_PORT)
