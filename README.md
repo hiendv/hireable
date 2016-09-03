@@ -3,10 +3,10 @@
 
 Available-for-hire badge built with [Koa framework](https://github.com/koajs/koa)
 
-[![Is hiendv available for hire?](https://hireable.0x1115.org/hiendv)](https://hireable.0x1115.org/p/hiendv)
+[![Is hiendv available for hire?](http://hireable.me/hiendv)](http://hireable.me/p/hiendv)
 
 ```
-[![Is <username> available for hire?](http://www.hireable.me/<username>)](http://www.hireable.me/p/<username>)
+[![Is <username> available for hire?](http://hireable.me/<username>)](http://hireable.me/p/<username>)
 ```
 *`<username>` is a GitHub username*
 
