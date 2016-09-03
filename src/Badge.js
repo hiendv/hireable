@@ -33,7 +33,7 @@ let _styles = function () {
   Object.keys(images).forEach(function (key) {
     let image = images[key]
     let imageSrc = path.join(__dirname, STYLE_DIR, style, image)
-    fs.accessSync(imageSrc, fs.constants.R_OK)
+    fs.accessSync(imageSrc)
 
     sources[key] = imageSrc
   })
