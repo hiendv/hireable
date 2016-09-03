@@ -29,8 +29,8 @@ app.use(Route.get('/:user', function * show (username) {
     source = user.badge
   })
 
-  yield Send(this, './assets/' + source, {
-    root: __dirname
+  yield Send(this, source, {
+    root: '/'
   })
 }))
 

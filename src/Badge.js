@@ -1,11 +1,44 @@
 'use strict'
 
+import fs from 'fs'
+import path from 'path'
+
 import Cache from './Cache'
 import GitHub from './GitHub'
 
-let services = {
+var services = {
   github () {},
   cache () {}
+}
+
+const images = {
+  yes: 'yes.svg',
+  no: 'no.svg',
+  error: 'error.svg'
+}
+
+const srcs = {}
+
+var style = 'default'
+
+/**
+ * @return void
+ */
+let _styles = function () {
+  const PATH = 'styles'
+
+  if (!process.env.APP_STYLE) {
+    return
+  }
+
+  Object.keys(images).forEach(function (key) {
+    let image = images[key]
+    let imageSrc = path.join(__dirname, PATH, style, image)
+    // Validate source existence
+    fs.accessSync(imageSrc, fs.constants.R_OK)
+
+    srcs[key] = imageSrc
+  })
 }
 
 /**
@@ -26,24 +59,19 @@ let _show = function (username) {
       id: user.id,
       username: user.login,
       hireable: user.hireable,
-      badge: user.hireable ? 'hireable-yes.svg' : 'hireable-no.svg'
+      badge: user.hireable ? srcs.yes : srcs.no
     }
   })
   .catch(e => {
     return {
       error: e.status,
       message: e.json ? e.json.message : e.message,
-      badge: 'hireable-error.svg'
+      badge: srcs.error
     }
   })
 }
 
 let _init = function () {
-  // No need to check whether caching is disabled or not
-  this.show = services.cache.rememberFunction(_show)
-}
-
-let Badge = function () {
   services = {
     cache: new Cache({
       age: parseInt(process.env.APP_CACHE)
@@ -52,6 +80,13 @@ let Badge = function () {
       token: process.env.GITHUB_TOKEN
     })
   }
+
+  this.show = services.cache.rememberFunction(_show)
+
+  _styles.call(this)
+}
+
+let Badge = function () {
   _init.call(this)
 }
 
