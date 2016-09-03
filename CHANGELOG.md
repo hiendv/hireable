@@ -16,6 +16,7 @@ Changelog entries are classified using the following labels _(from [keep-a-chang
 - Pass the whole user object to Promise result from `Badge.show` instead of badge `src`
 - Refactor Badge & main modules. Move services into Badge
 - Use `brightgreen` for `hireable:yes` instead of `green`
+- Use [hireable.me](http://hireable.me) as the primary domain
 
 ## [v0.1.3] - 2016-08-27
 ### Added
