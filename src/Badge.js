@@ -6,35 +6,33 @@ import path from 'path'
 import Cache from './Cache'
 import GitHub from './GitHub'
 
-var services = {
-  github () {},
-  cache () {}
-}
-
+const STYLE_DIR = 'styles'
 const images = {
   yes: 'yes.svg',
   no: 'no.svg',
   error: 'error.svg'
 }
 
-const sources = {}
+let sources = {}
+let style
 
-var style = 'default'
+let services = {
+  github () {},
+  cache () {}
+}
 
 /**
  * @return void
  */
 let _styles = function () {
-  const PATH = 'styles'
-
   if (!process.env.APP_STYLE) {
-    return
+    style = 'default'
   }
 
+  // Validate source existence
   Object.keys(images).forEach(function (key) {
     let image = images[key]
-    let imageSrc = path.join(__dirname, PATH, style, image)
-    // Validate source existence
+    let imageSrc = path.join(__dirname, STYLE_DIR, style, image)
     fs.accessSync(imageSrc, fs.constants.R_OK)
 
     sources[key] = imageSrc
@@ -92,7 +90,6 @@ let Badge = function () {
 
 Badge.prototype = {
   show (username) {
-    // Default
     _show.call(this, username)
   },
 
