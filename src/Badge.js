@@ -17,7 +17,7 @@ const images = {
   error: 'error.svg'
 }
 
-const srcs = {}
+const sources = {}
 
 var style = 'default'
 
@@ -37,7 +37,7 @@ let _styles = function () {
     // Validate source existence
     fs.accessSync(imageSrc, fs.constants.R_OK)
 
-    srcs[key] = imageSrc
+    sources[key] = imageSrc
   })
 }
 
@@ -59,14 +59,14 @@ let _show = function (username) {
       id: user.id,
       username: user.login,
       hireable: user.hireable,
-      badge: user.hireable ? srcs.yes : srcs.no
+      badge: user.hireable ? sources.yes : sources.no
     }
   })
   .catch(e => {
     return {
       error: e.status,
       message: e.json ? e.json.message : e.message,
-      badge: srcs.error
+      badge: sources.error
     }
   })
 }
