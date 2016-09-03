@@ -7,11 +7,11 @@ var name = path.join(__dirname, pkg.name + '-v' + pkg.version + '.zip')
 var output = fs.createWriteStream(name)
 var archive = archiver('zip')
 
-output.on('close', function() {
+output.on('close', function () {
   console.log(name + ' is created')
 })
 
-archive.on('error', function(err) {
+archive.on('error', function (err) {
   throw err
 })
 

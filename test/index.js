@@ -1,10 +1,12 @@
+/* eslint-env node, mocha */
+
 import http from 'http'
 import assert from 'assert'
 
 import '../src/index.js'
 
 let url = function (route) {
-  return 'http://127.0.0.1:' + process.env.APP_PORT + route;
+  return 'http://127.0.0.1:' + process.env.APP_PORT + route
 }
 
 describe('GET /', () => {
