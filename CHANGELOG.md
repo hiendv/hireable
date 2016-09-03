@@ -9,7 +9,10 @@ Changelog entries are classified using the following labels _(from [keep-a-chang
 - `removed`: for deprecated features removed in this release
 - `fixed`: for any bug fixes
 
-## [Unreleased]
+## [v0.2.0] - 2016-09-03
+### Added
+- Add `Styles`. Now you're free to customize. See [#7](https://github.com/hiendv/hireable/issues/7) for more information
+
 ### Changed
 - Drop `:repo` from `/:user` route
 - Move `GitHub` and `Cache` into separated modules
@@ -17,6 +20,7 @@ Changelog entries are classified using the following labels _(from [keep-a-chang
 - Refactor Badge & main modules. Move services into Badge
 - Use `brightgreen` for `hireable:yes` instead of `green`
 - Use [hireable.me](http://hireable.me) as the primary domain
+- Support all versions of Node.js v4 instead of `>=4.2.0`
 
 ## [v0.1.3] - 2016-08-27
 ### Added
@@ -51,9 +55,10 @@ Changelog entries are classified using the following labels _(from [keep-a-chang
 
 ## [v0.1.0] - 2016-08-19
 ### Added
-- First release.
+- First release
 
-[Unreleased]: https://github.com/hiendv/hireable/compare/v0.1.3...HEAD
+[Unreleased]: https://github.com/hiendv/hireable/compare/v0.2.0...HEAD
+[v0.2.0]: https://github.com/hiendv/hireable/compare/v0.1.3...v0.2.0
 [v0.1.3]: https://github.com/hiendv/hireable/compare/v0.1.2...v0.1.3
 [v0.1.2]: https://github.com/hiendv/hireable/compare/v0.1.1...v0.1.2
 [v0.1.1]: https://github.com/hiendv/hireable/compare/v0.1.0...v0.1.1
