@@ -1,11 +1,42 @@
 'use strict'
 
+import fs from 'fs'
+import path from 'path'
+
 import Cache from './Cache'
 import GitHub from './GitHub'
+
+const STYLE_DIR = 'styles'
+const images = {
+  yes: 'yes.svg',
+  no: 'no.svg',
+  error: 'error.svg'
+}
+
+let sources = {}
+let style
 
 let services = {
   github () {},
   cache () {}
+}
+
+/**
+ * @return void
+ */
+let _styles = function () {
+  if (!process.env.APP_STYLE) {
+    style = 'default'
+  }
+
+  // Validate source existence
+  Object.keys(images).forEach(function (key) {
+    let image = images[key]
+    let imageSrc = path.join(__dirname, STYLE_DIR, style, image)
+    fs.accessSync(imageSrc)
+
+    sources[key] = imageSrc
+  })
 }
 
 /**
@@ -26,24 +57,19 @@ let _show = function (username) {
       id: user.id,
       username: user.login,
       hireable: user.hireable,
-      badge: user.hireable ? 'hireable-yes.svg' : 'hireable-no.svg'
+      badge: user.hireable ? sources.yes : sources.no
     }
   })
   .catch(e => {
     return {
       error: e.status,
       message: e.json ? e.json.message : e.message,
-      badge: 'hireable-error.svg'
+      badge: sources.error
     }
   })
 }
 
 let _init = function () {
-  // No need to check whether caching is disabled or not
-  this.show = services.cache.rememberFunction(_show)
-}
-
-let Badge = function () {
   services = {
     cache: new Cache({
       age: parseInt(process.env.APP_CACHE)
@@ -52,12 +78,18 @@ let Badge = function () {
       token: process.env.GITHUB_TOKEN
     })
   }
+
+  this.show = services.cache.rememberFunction(_show)
+
+  _styles.call(this)
+}
+
+let Badge = function () {
   _init.call(this)
 }
 
 Badge.prototype = {
   show (username) {
-    // Default
     _show.call(this, username)
   },
 

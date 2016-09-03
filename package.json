@@ -11,7 +11,7 @@
     "build": "shx rm -rf lib && babel src -d lib && shx cp -r src/assets lib/. && node build/build.js"
   },
   "private": true,
-  "author": "hiendv <neo.go.vn@gmail.com>",
+  "author": "Hien Dao Vinh <neo.go.vn@gmail.com>",
   "contributors": [
     "Peter Nguyen <peter.nguyen.autodesk.com>"
   ],
