@@ -1,5 +1,5 @@
 # hireable
-[![Build Status](https://travis-ci.org/hiendv/hireable.svg?branch=master)](https://travis-ci.org/hiendv/hireable)
+[![Build Status](https://travis-ci.org/hiendv/hireable.svg?branch=master)](https://travis-ci.org/hiendv/hireable) [![bitHound Dependencies](https://www.bithound.io/github/hiendv/hireable/badges/dependencies.svg)](https://www.bithound.io/github/hiendv/hireable/master/dependencies/npm) [![bitHound Dev Dependencies](https://www.bithound.io/github/hiendv/hireable/badges/devDependencies.svg)](https://www.bithound.io/github/hiendv/hireable/master/dependencies/npm) [![bitHound Code](https://www.bithound.io/github/hiendv/hireable/badges/code.svg)](https://www.bithound.io/github/hiendv/hireable)
 
 Available-for-hire badge built with [Koa framework](https://github.com/koajs/koa)
 
