@@ -12,6 +12,9 @@
   },
   "private": true,
   "author": "hiendv <neo.go.vn@gmail.com>",
+  "contributors": [
+    "Peter Nguyen <peter.nguyen.autodesk.com>"
+  ],
   "license": "MIT",
   "engineStrict": true,
   "engines": {
