@@ -10,7 +10,7 @@ Available-for-hire badge built with [Koa framework](https://github.com/koajs/koa
 ```
 *`<username>` is a GitHub username*
 
-[hireable.me](http://hireable.me) is sponsored by @nguyenph88. Thank you so much for your contribution.
+[hireable.me](http://hireable.me) is sponsored by [@nguyenph88](https://github.com/nguyenph88). Thank you so much for your contribution.
 
 ## But why?
 Some of my friends want to embed the employment status into their open-source projects.
