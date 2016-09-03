@@ -8,7 +8,7 @@
     "test": "mocha --compilers js:babel-register",
     "lint": "eslint --ext .js src",
     "serve": "node lib/index.js",
-    "build": "shx rm -rf lib && babel src -d lib && shx cp -r src/assets lib/. && node build/build.js"
+    "build": "shx rm -rf lib && babel src -d lib && shx cp -r src/styles lib/. && node build/build.js"
   },
   "private": true,
   "author": "Hien Dao Vinh <neo.go.vn@gmail.com>",
