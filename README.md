@@ -17,10 +17,6 @@ Some of my friends want to embed the employment status into their open-source pr
 But it takes too much time and effort to keep these information up-to-date across your projects.  
 I thought it would be much cooler to tell people whether you're hireable or not with a badge. Isn't it? :confused:
 
-## Roadmap
-- [x] Customizable styles: [Released - v0.2.0](./CHANGELOG.md#v020---2016-09-03)
-- [ ] On-the-fly badges
-
 ## The badges
 ![Hireable](https://cdn.rawgit.com/hiendv/hireable/master/src/styles/default/yes.svg)
 ![Not hireable](https://cdn.rawgit.com/hiendv/hireable/master/src/styles/default/no.svg)
@@ -34,6 +30,10 @@ A: Your [GitHub jobs profile](https://github.com/settings/profile#user_profile_h
 
 - Q: **Cache expiration**  
 A: GitHub has their own image proxy: [camo](https://help.github.com/articles/why-do-my-images-have-strange-urls/). Hireable caching is flexible, see [Configurations](#configurations)
+
+## Roadmap
+- [x] Customizable styles: [Released - v0.2.0](./CHANGELOG.md#v020---2016-09-03)
+- [ ] On-the-fly badges: Not implemented. See [#3 (comment)](https://github.com/hiendv/hireable/pull/3#issuecomment-242659951).
 
 ## Quickstart Installation
 - Download the latest release [here](https://github.com/hiendv/hireable/releases)
