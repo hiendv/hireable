@@ -9,18 +9,32 @@ Changelog entries are classified using the following labels _(from [keep-a-chang
 - `removed`: for deprecated features removed in this release
 - `fixed`: for any bug fixes
 
+## [Unreleased]
+### Added
+- Add some bithound badges to README
+
+### Changed
+- Setup eslint for tests & build script
+- Increase mocha timeout to 5000ms
+- Update eslint-config-standard to v6.0.0
+
+### Fixed
+- Correct README badge urls
+
 ## [v0.2.0] - 2016-09-03
 ### Added
 - Add `Styles`. Now you're free to customize. See [#7](https://github.com/hiendv/hireable/issues/7) for more information
 
 ### Changed
-- Drop `:repo` from `/:user` route
 - Move `GitHub` and `Cache` into separated modules
 - Pass the whole user object to Promise result from `Badge.show` instead of badge `src`
 - Refactor Badge & main modules. Move services into Badge
 - Use `brightgreen` for `hireable:yes` instead of `green`
 - Use [hireable.me](http://hireable.me) as the primary domain
 - Support all versions of Node.js v4 instead of `>=4.2.0`
+
+### Removed
+- Drop `:repo` from `/:user` route
 
 ## [v0.1.3] - 2016-08-27
 ### Added
