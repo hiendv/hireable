@@ -12,6 +12,7 @@ Changelog entries are classified using the following labels _(from [keep-a-chang
 ## [Unreleased]
 ### Added
 - Add some bithound badges to README
+- Add `APP_STYLE` configuration to README
 
 ### Changed
 - Setup eslint for tests & build script
@@ -20,6 +21,7 @@ Changelog entries are classified using the following labels _(from [keep-a-chang
 
 ### Fixed
 - Correct README badge urls
+- Correct `APP_CACHE` configuration in README
 
 ## [v0.2.0] - 2016-09-03
 ### Added

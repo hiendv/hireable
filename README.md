@@ -55,8 +55,11 @@ Configurations are defined in `.env` file.
 # Application port
 APP_PORT=1406
 
-# Cache expiration in ms. Leave it null to disable
+# Cache expiration in ms. Leave it null or 0 to disable
 APP_CACHE=
+
+# Your badge style. Leave it null for `default` style
+APP_STYLE=
 
 # GitHub personal access token. See https://github.com/settings/tokens
 GITHUB_TOKEN=PersonalAccessToken
