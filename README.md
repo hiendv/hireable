@@ -18,9 +18,9 @@ But it takes too much time and effort to keep these information up-to-date acros
 I thought it would be much cooler to tell people whether you're hireable or not with a badge. Isn't it? :confused:
 
 ## The badges
-![Hireable](https://cdn.rawgit.com/hiendv/hireable/master/src/assets/hireable-yes.svg)
-![Not hireable](https://cdn.rawgit.com/hiendv/hireable/master/src/assets/hireable-no.svg)
-![Error](https://cdn.rawgit.com/hiendv/hireable/master/src/assets/hireable-error.svg)
+![Hireable](https://cdn.rawgit.com/hiendv/hireable/master/src/styles/default/yes.svg)
+![Not hireable](https://cdn.rawgit.com/hiendv/hireable/master/src/styles/default/no.svg)
+![Error](https://cdn.rawgit.com/hiendv/hireable/master/src/styles/default/error.svg)
 
 I was too lazy to implement [badges/shields specification](https://github.com/badges/shields/blob/master/spec/SPECIFICATION.md)  
 No on-the-fly generated badges for now, I guess. They are all pre-generated. 
