@@ -10,6 +10,8 @@ Changelog entries are classified using the following labels _(from [keep-a-chang
 - `fixed`: for any bug fixes
 
 ## [Unreleased]
+### Added
+- Roadmap
 
 ## [v0.2.1] - 2016-09-05
 ### Added
