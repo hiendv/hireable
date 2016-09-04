@@ -7,7 +7,7 @@ Available-for-hire badge built with [Koa framework](https://github.com/koajs/koa
 
 ## Usage
 
-Copy this code and add to **README** (or **README.md**) in your project:
+Copy this code and paste it into **README** (or **README.md**) in your project:
 
 ```
 [![Is <username> available for hire?](http://hireable.me/<username>)](http://hireable.me/p/<username>)
