@@ -13,7 +13,8 @@
   "private": true,
   "author": "Hien Dao Vinh <neo.go.vn@gmail.com>",
   "contributors": [
-    "Peter Nguyen <peter.nguyen.autodesk.com>"
+    "Peter Nguyen <peter.nguyen.autodesk.com>",
+    "Manh Tuan <junookyo@gmail.com>"
   ],
   "license": "MIT",
   "engineStrict": true,
