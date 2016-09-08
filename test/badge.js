@@ -21,7 +21,8 @@ describe('Badge tests', () => {
     done()
   })
 
-  it('should show a user', done => {
+  it('should show a user', function (done) {
+    this.timeout(15000)
     badge.show('ghost').then(obj => {
       assert(typeof obj === 'object')
       assert(obj.username === 'ghost')
@@ -29,14 +30,16 @@ describe('Badge tests', () => {
     })
   })
 
-  it('should show a user with hireable', done => {
+  it('should show a user with hireable', function (done) {
+    this.timeout(15000)
     badge.show('ghost').then(obj => {
       assert(typeof obj.hireable === 'boolean')
       done()
     })
   })
 
-  it('should show a user not hireable', done => {
+  it('should show a user not hireable', function (done) {
+    this.timeout(15000)
     badge.show('ghost').then(obj => {
       assert(obj.hireable === false)
       done()
