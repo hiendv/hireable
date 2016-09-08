@@ -41,8 +41,8 @@ No on-the-fly generated badges for now, I guess. They are all pre-generated.
 - Q: **How do you know when I'm hireable?**  
 A: Your [GitHub jobs profile](https://github.com/settings/profile#user_profile_hireable)
 
-- Q: **Cache expiration**  
-A: GitHub has their own image proxy: [camo](https://help.github.com/articles/why-do-my-images-have-strange-urls/). Hireable caching is flexible, see [Configurations](#configurations)
+- Q: **The badge on hireable.me is updated by GitHub is showing the cached one.**  
+A: GitHub has their own image proxy: [camo](https://help.github.com/articles/why-do-my-images-have-strange-urls/).
 
 ## Roadmap
 - [x] Customizable styles: [Released - v0.2.0](./CHANGELOG.md#v020---2016-09-03)
