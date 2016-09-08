@@ -11,7 +11,7 @@
     "build": "shx rm -rf lib && babel src -d lib && shx cp -r src/styles lib/. && node build/build.js"
   },
   "private": true,
-  "author": "Hien Dao Vinh <neo.go.vn@gmail.com>",
+  "author": "Hien Dao Vinh <hien.dv.neo@gmail.com>",
   "contributors": [
     "Peter Nguyen <nguyenph88@gmail.com>",
     "Manh Tuan <junookyo@gmail.com>"
