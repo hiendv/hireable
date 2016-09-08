@@ -1,6 +1,6 @@
 {
   "name": "hireable",
-  "version": "0.2.1",
+  "version": "0.3.0-rc.1",
   "description": "Available-for-hire badge",
   "main": "lib/index.js",
   "scripts": {
@@ -24,11 +24,10 @@
   "dependencies": {
     "babel-runtime": "^6.11.6",
     "dotenv": "^2.0.0",
-    "koa": "^1.2.1",
-    "koa-route": "^2.4.2",
-    "koa-send": "^3.2.0",
     "memoizee": "^0.4.1",
-    "octokat": "^0.4.18"
+    "octokat": "^0.4.18",
+    "send": "^0.14.1",
+    "url-pattern": "^1.0.1"
   },
   "devDependencies": {
     "archiver": "^1.0.1",
