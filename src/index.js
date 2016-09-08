@@ -17,6 +17,7 @@ const routes = {
         (new Badge()).show(params.user).then(user => {
           // ETag is automatically generated
           response.setHeader('Cache-Control', 'private')
+          response.setHeader('Hireable', ~~user.hireable) // Double bitwise NOT
           Send(request, user.badge).pipe(response)
         })
       }
@@ -68,3 +69,5 @@ app.listen(process.env.APP_PORT, () => {
   console.log('Listening on :' + process.env.APP_PORT)
   console.log('Visit http://localhost:' + process.env.APP_PORT)
 })
+
+module.exports = app
