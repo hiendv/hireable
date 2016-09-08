@@ -10,13 +10,8 @@ let url = function (route) {
 }
 
 describe('GET /', () => {
-  before(function () {
-    App.listen(process.env.APP_PORT)
-  })
-
-  after(function () {
-    App.close()
-  })
+  before(() => App.listen(process.env.APP_PORT))
+  after(() => App.close())
 
   it('should return 200', done => {
     http.get(url('/'), res => {
@@ -27,13 +22,8 @@ describe('GET /', () => {
 })
 
 describe('GET /ghost', () => {
-  before(function () {
-    App.listen(process.env.APP_PORT)
-  })
-
-  after(function () {
-    App.close()
-  })
+  before(() => App.listen(process.env.APP_PORT))
+  after(() => App.close())
 
   it('should return 200', done => {
     http.get(url('/ghost'), res => {
