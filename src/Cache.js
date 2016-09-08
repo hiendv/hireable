@@ -8,6 +8,7 @@ let Cache = function (options) {
     maxAge: options.age ? options.age : 0
   }
 }
+
 Cache.prototype = {
   rememberFunction (fn) {
     if (!this.options.maxAge) {

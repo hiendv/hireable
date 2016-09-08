@@ -37,7 +37,7 @@ const routes = {
 
 const app = http.createServer(function (request, response) {
   if (request.method !== 'GET') {
-    // Only GET
+    // Only GET for now
     response.writeHead(403)
     response.end()
     return
