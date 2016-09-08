@@ -56,7 +56,7 @@ let _show = function (username) {
     return {
       id: user.id,
       username: user.login,
-      hireable: user.hireable,
+      hireable: user.hireable === true,
       badge: user.hireable ? sources.yes : sources.no
     }
   })
