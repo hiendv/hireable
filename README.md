@@ -47,6 +47,8 @@ A: GitHub has their own image proxy: [camo](https://help.github.com/articles/why
 ## Roadmap
 - [x] Customizable styles: [Released - v0.2.0](./CHANGELOG.md#v020---2016-09-03)
 - [ ] On-the-fly badges: Not implemented. See [#3 (comment)](https://github.com/hiendv/hireable/pull/3#issuecomment-242659951).
+- [ ] Styling using request parameters: Not implemented. See [#9 (comment)](https://github.com/hiendv/hireable/issues/9).
+- [x] Remove Koa & related libraries: [WIP - v0.3.0](https://github.com/hiendv/hireable/issues/11) & [develop branch](https://github.com/hiendv/hireable/tree/develop)
 
 ## Quickstart Installation
 - Download the latest release [here](https://github.com/hiendv/hireable/releases)
