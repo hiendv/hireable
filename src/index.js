@@ -44,7 +44,7 @@ const app = http.createServer(function (request, response) {
     return
   }
 
-  let parts = url.parse(request.url)
+  let parts = url.parse(request.url, false, true)
 
   if (parts.pathname === '/favicon.ico') {
     response.writeHead(404)
