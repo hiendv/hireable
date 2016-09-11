@@ -75,10 +75,10 @@ App.prototype = {
     return 'http://127.0.0.1:' + process.env.APP_PORT + '/' + endpoint
   },
   run (port) {
-    var port = port || process.env.APP_PORT
-    _server.listen(port, () => {
-      console.log('Listening on :' + port)
-      console.log('Visit http://127.0.0.1:' + port)
+    let APP_PORT = port || process.env.APP_PORT
+    _server.listen(APP_PORT, () => {
+      console.log('Listening on :' + APP_PORT)
+      console.log('Visit http://127.0.0.1:' + APP_PORT)
     })
   },
   stop () {
