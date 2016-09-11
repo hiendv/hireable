@@ -5,8 +5,10 @@
   "main": "lib/index.js",
   "scripts": {
     "dev": "nodemon src/index.js --exec 'npm run lint && babel-node'",
-    "test": "mocha --compilers js:babel-register --timeout 5000",
-    "lint": "eslint --ext .js src build test",
+    "test": "mocha --compilers js:babel-register",
+    "test-live": "nodemon test --exec 'npm run lint:test && npm run test'",
+    "lint": "eslint --ext .js src build && npm run lint:test",
+    "lint:test": "eslint --ext .js test",
     "serve": "node lib/index.js",
     "build": "shx rm -rf lib && babel src -d lib && shx cp -r src/styles lib/. && node build/build.js"
   },
