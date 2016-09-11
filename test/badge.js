@@ -1,12 +1,17 @@
 /* eslint-env node, mocha */
 
 import assert from 'assert'
+import path from 'path'
 
-import Badge from '../src/Badge'
+import muk from 'muk'
+
+const Badge = muk('../src/Badge', {
+  'fs': require('./mocks/fs.js')
+}).default
 
 describe('Badge tests', () => {
   let badge
-  beforeEach(() => {
+  before(() => {
     badge = new Badge()
   })
 
@@ -16,33 +21,46 @@ describe('Badge tests', () => {
     done()
   })
 
-  it('should have show method', done => {
-    assert(typeof badge.show === 'function')
+  it('should have all method', done => {
+    assert(typeof badge.all === 'function')
     done()
   })
 
-  it('should show a user', function (done) {
-    this.timeout(15000)
-    badge.show('ghost').then(obj => {
-      assert(typeof obj === 'object')
-      assert(obj.username === 'ghost')
-      done()
-    })
+  it('should have return badges', done => {
+    let badges = badge.all()
+    assert(badges.yes)
+    assert(badges.no)
+    assert(badges.error)
+    done()
   })
 
-  it('should show a user with hireable', function (done) {
-    this.timeout(15000)
-    badge.show('ghost').then(obj => {
-      assert(typeof obj.hireable === 'boolean')
-      done()
-    })
+  it('should have return badges in another style', done => {
+    badge = new Badge('other-style')
+    let badges = badge.all()
+    let images = badge.images()
+    assert(badges.yes === path.join(__dirname, '../src', badge.dir(), 'other-style', images.yes))
+    assert(badges.no === path.join(__dirname, '../src', badge.dir(), 'other-style', images.no))
+    assert(badges.error === path.join(__dirname, '../src', badge.dir(), 'other-style', images.error))
+    done()
   })
 
-  it('should show a user not hireable', function (done) {
-    this.timeout(15000)
-    badge.show('ghost').then(obj => {
-      assert(obj.hireable === false)
-      done()
-    })
+  it('should have return badges in another directory', done => {
+    badge = new Badge(null, 'other-dir')
+    let badges = badge.all()
+    let images = badge.images()
+    assert(badges.yes === path.join(__dirname, '../src', 'other-dir', badge.style(), images.yes))
+    assert(badges.no === path.join(__dirname, '../src', 'other-dir', badge.style(), images.no))
+    assert(badges.error === path.join(__dirname, '../src', 'other-dir', badge.style(), images.error))
+    done()
+  })
+
+  it('should have return badges in another directory and another style', done => {
+    badge = new Badge('other-style', 'other-dir')
+    let badges = badge.all()
+    let images = badge.images()
+    assert(badges.yes === path.join(__dirname, '../src', 'other-dir', 'other-style', images.yes))
+    assert(badges.no === path.join(__dirname, '../src', 'other-dir', 'other-style', images.no))
+    assert(badges.error === path.join(__dirname, '../src', 'other-dir', 'other-style', images.error))
+    done()
   })
 })
