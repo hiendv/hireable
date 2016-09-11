@@ -1,7 +1,7 @@
 # hireable
 [![Build Status](https://travis-ci.org/hiendv/hireable.svg?branch=master)](https://travis-ci.org/hiendv/hireable) [![bitHound Dependencies](https://www.bithound.io/github/hiendv/hireable/badges/dependencies.svg)](https://www.bithound.io/github/hiendv/hireable/master/dependencies/npm) [![bitHound Dev Dependencies](https://www.bithound.io/github/hiendv/hireable/badges/devDependencies.svg)](https://www.bithound.io/github/hiendv/hireable/master/dependencies/npm) [![bitHound Code](https://www.bithound.io/github/hiendv/hireable/badges/code.svg)](https://www.bithound.io/github/hiendv/hireable)
 
-Available-for-hire badge built with :coffee: 
+Available-for-hire badge built with :coffee:  
 
 [![Is hiendv available for hire?](http://hireable.me/hiendv)](http://hireable.me/p/hiendv)
 
@@ -21,7 +21,16 @@ Want to use this badge on your website? Here is the HTML version:
 </a>
 ```
 
-*`<username>` is a GitHub username*
+You hate this style? Try others by modifying the URL of the badge as follow:
+```
+http://hireable.me/<username>/<style>
+# Styles: default (null)
+# Others will be added soon
+```
+
+*`<username>` is a GitHub username*  
+*`<style>` is a supported style*
+
 
 [hireable.me](http://hireable.me) is sponsored by [@nguyenph88](https://github.com/nguyenph88). Thank you so much for your contribution.
 
