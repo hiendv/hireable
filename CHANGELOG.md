@@ -9,7 +9,7 @@ Changelog entries are classified using the following labels _(from [keep-a-chang
 - `removed`: for deprecated features removed in this release
 - `fixed`: for any bug fixes
 
-## [Unreleased]
+## [v0.3.0-rc.2] - 2016-09-11
 ### Added
 - Add `Hireable` header to badge response
 - Add some tests
