@@ -15,6 +15,7 @@ Changelog entries are classified using the following labels _(from [keep-a-chang
 - Add some tests
 - Add mocks
 - Add `APP_STYLE_DIR` environment variable
+- Add npm script `test-live`
 
 ### Changed
 - Modulize `App` out of `index.js`

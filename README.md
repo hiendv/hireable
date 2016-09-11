@@ -102,6 +102,8 @@ npm run build && cd build
 ## Testing
 ```bash
 npm test
+# Live testing?
+npm run test-live
 ```
 
 ## Contribution
