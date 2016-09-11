@@ -32,7 +32,7 @@ http://hireable.me/<username>/<style>
 - default (null)
 - Others will be added soon
 
-[hireable.me](http://hireable.me) is sponsored by [@nguyenph88](https://github.com/nguyenph88). Thank you so much for your contribution.
+[hireable.me](http://hireable.me) is sponsored by [@nguyenph88](https://github.com/nguyenph88). Thank you so much for making it possible!
 
 ## But why?
 Some of my friends want to embed the employment status into their open-source projects.
