@@ -13,13 +13,22 @@ import Badge from './Badge'
 const _ROUTES = {
   user () {
     return {
-      pattern: new Pattern('(/*):user(/)'),
+      pattern: new Pattern('(/*):user(/:style)(/)'),
       then (request, response, params) {
-        (new User(new Badge())).show(params.user).then(user => {
-          response.setHeader('Cache-Control', 'private')
-          response.setHeader('Hireable', ~~user.hireable) // Double bitwise NOT
-          Send(request, user.badge).pipe(response)
-        })
+        try {
+          (new User(new Badge(params.style))).show(params.user).then(user => {
+            response.setHeader('Cache-Control', 'private')
+            response.setHeader('Hireable', ~~user.hireable) // Double bitwise NOT
+            Send(request, user.badge).pipe(response)
+          })
+        } catch (error) {
+          if (error.code === 'ENOENT') {
+            this.abort(403, 'Style Not Supported')
+            return
+          }
+
+          throw error
+        }
       }
     }
   },
@@ -44,9 +53,10 @@ let _dispatch = function (request, response) {
     response.writeHead(code)
     response.end(msg)
   }
+  this.abort = abort
 
   if (request.method !== 'GET') {
-    return abort(403, 'Supported methods: GET')
+    return abort(405, 'Method Not Allowed')
   }
 
   let parts = url.parse(request.url)
@@ -56,7 +66,7 @@ let _dispatch = function (request, response) {
   }
 
   for (let key in _ROUTES) {
-    let route = _ROUTES[key]()
+    let route = _ROUTES[key].call(this)
     let params = route.pattern.match(parts.pathname)
     if (!params) {
       continue

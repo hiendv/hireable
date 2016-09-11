@@ -55,9 +55,8 @@ let _loadDirectory = function (directory) {
 }
 
 let Badge = function (style, directory) {
-  _loadStyle.call(this, style)
   _loadDirectory.call(this, directory)
-  _loadSources.call(this)
+  this.setStyle(style)
 }
 
 Badge.prototype = {
@@ -69,6 +68,10 @@ Badge.prototype = {
   },
   style () {
     return _style
+  },
+  setStyle (style) {
+    _loadStyle.call(this, style)
+    _loadSources.call(this)
   },
   images () {
     return _IMAGES
