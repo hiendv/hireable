@@ -3,6 +3,10 @@
 import assert from 'assert'
 import muk from 'muk'
 
+const Badge = muk('../src/Badge', {
+  'fs': require('./mocks/fs.js')
+}).default
+
 const User = muk('../src/User', {
   './GitHub': require('./mocks/GitHub.js')
 }).default
@@ -10,7 +14,7 @@ const User = muk('../src/User', {
 describe('User tests', () => {
   let user
   before(() => {
-    user = new User()
+    user = new User(new Badge())
   })
 
   it('should be a user instance', done => {

@@ -10,12 +10,11 @@ let Cache = function (options) {
 }
 
 Cache.prototype = {
-  rememberFunction (fn) {
+  rememberFunction (fn, scope) {
     if (!this.options.maxAge) {
       return fn
     }
-
-    return MemoizeeInstance.call(this, fn, this.options)
+    return MemoizeeInstance.call(scope, fn, this.options)
   },
   toString () {
     return '[Cache Object]'

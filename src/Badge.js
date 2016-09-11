@@ -8,21 +8,25 @@ const _IMAGES = {
   no: 'no.svg',
   error: 'error.svg'
 }
+
 let _style
 let _directory
-let _sources = {}
+let _sources
 
 let _loadSources = function () {
+  let sources = {}
   Object.keys(_IMAGES).forEach(function (key) {
     let image = _IMAGES[key]
     let imageSrc = path.join(__dirname, _directory, _style, image)
     fs.accessSync(imageSrc)
 
-    _sources[key] = imageSrc
+    sources[key] = imageSrc
   })
+
+  _sources = sources
 }
 
-let _styleInit = function (style) {
+let _loadStyle = function (style) {
   if (style) {
     _style = style
     return
@@ -36,7 +40,7 @@ let _styleInit = function (style) {
   _style = 'default'
 }
 
-let _directoryInit = function (directory) {
+let _loadDirectory = function (directory) {
   if (directory) {
     _directory = directory
     return
@@ -51,8 +55,8 @@ let _directoryInit = function (directory) {
 }
 
 let Badge = function (style, directory) {
-  _styleInit.call(this, style)
-  _directoryInit.call(this, directory)
+  _loadStyle.call(this, style)
+  _loadDirectory.call(this, directory)
   _loadSources.call(this)
 }
 

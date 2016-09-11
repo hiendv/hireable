@@ -8,13 +8,14 @@ import Send from 'send'
 
 import {version} from '../package.json'
 import User from './User'
+import Badge from './Badge'
 
 const _ROUTES = {
   user () {
     return {
       pattern: new Pattern('(/*):user(/)'),
       then (request, response, params) {
-        (new User()).show(params.user).then(user => {
+        (new User(new Badge())).show(params.user).then(user => {
           response.setHeader('Cache-Control', 'private')
           response.setHeader('Hireable', ~~user.hireable) // Double bitwise NOT
           Send(request, user.badge).pipe(response)
@@ -34,19 +35,24 @@ const _ROUTES = {
     }
   }
 }
+
 let _dispatch = function (request, response) {
+  let abort = function (code, msg) {
+    if (!code) {
+      code = 200
+    }
+    response.writeHead(code)
+    response.end(msg)
+  }
+
   if (request.method !== 'GET') {
-    // Only GET for now
-    response.writeHead(403)
-    response.end()
-    return
+    return abort(403, 'Supported methods: GET')
   }
 
   let parts = url.parse(request.url)
 
   if (parts.pathname === '/favicon.ico') {
-    response.writeHead(404)
-    response.end()
+    return abort(404)
   }
 
   for (let key in _ROUTES) {
@@ -59,22 +65,25 @@ let _dispatch = function (request, response) {
     return
   }
 
-  response.writeHead(200)
-  response.end('Hireable v' + version)
+  abort(200, 'Hireable v' + version)
 }
 
 let _server = http.createServer(_dispatch)
+let _port = process.env.APP_PORT
 
 let App = function () {}
 App.prototype = {
   route (endpoint) {
-    return 'http://127.0.0.1:' + process.env.APP_PORT + '/' + endpoint
+    return 'http://127.0.0.1:' + _port + (endpoint ? '/' + endpoint : '')
   },
   run (port) {
-    let APP_PORT = port || process.env.APP_PORT
-    _server.listen(APP_PORT, () => {
-      console.log('Listening on :' + APP_PORT)
-      console.log('Visit http://127.0.0.1:' + APP_PORT)
+    if (port) {
+      _port = port
+    }
+
+    _server.listen(_port, () => {
+      console.log('Listening on :' + _port)
+      console.log('Visit ' + this.route())
     })
   },
   stop () {

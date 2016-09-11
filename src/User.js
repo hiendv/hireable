@@ -2,34 +2,11 @@
 
 import Cache from './Cache'
 import GitHub from './GitHub'
-import Badge from './Badge'
-
-let badges = (new Badge()).all()
 
 let _services = {
   github () {},
-  cache () {}
-}
-
-let _init = function () {
-  _services = {
-    cache: new Cache({
-      age: parseInt(process.env.APP_CACHE)
-    }),
-    github: new GitHub({
-      token: process.env.GITHUB_TOKEN
-    })
-  }
-
-  this.show = _services.cache.rememberFunction(_show)
-}
-
-/**
- * @param  {String} username
- * @return {Promise}
- */
-let _fetch = function (username) {
-  return _services.github.users(username).fetch()
+  cache () {},
+  badge () {}
 }
 
 /**
@@ -37,7 +14,8 @@ let _fetch = function (username) {
  * @return {Promise}
  */
 let _show = function (username) {
-  return _fetch.call(this, username).then(user => {
+  let badges = _services.badge().all()
+  return _services.github.users(username).fetch().then(user => {
     return {
       id: user.id,
       username: user.login,
@@ -54,16 +32,23 @@ let _show = function (username) {
   })
 }
 
-let User = function () {
-  _init.call(this)
+let User = function (badge) {
+  _services = {
+    cache: new Cache({
+      age: parseInt(process.env.APP_CACHE)
+    }),
+    github: new GitHub({
+      token: process.env.GITHUB_TOKEN
+    }),
+    badge () {
+      return badge
+    }
+  }
 }
 
 User.prototype = {
   show (username) {
-    _show.call(this, username)
-  },
-  badges () {
-    return badges
+    return _services.cache.rememberFunction(_show, this).call(this, username)
   },
   toString () {
     return '[User Object]'
