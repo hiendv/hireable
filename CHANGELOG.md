@@ -9,6 +9,18 @@ Changelog entries are classified using the following labels _(from [keep-a-chang
 - `removed`: for deprecated features removed in this release
 - `fixed`: for any bug fixes
 
+## [Unreleased]
+### Added
+- Add `abort` helper inside `_dispatch` of `App`
+
+### Changed
+- Badge is injected by User constructor
+- Refactor `src/` & tests
+
+### Fixed
+- Fix URL patterns to allow multiple leading & following `/`
+- Pass `scope` to `Cache.rememberFunction` as the second parameter
+
 ## [v0.3.0-rc.2] - 2016-09-11
 ### Added
 - Add `Hireable` header to badge response
