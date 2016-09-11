@@ -20,14 +20,16 @@ let _show = function (username) {
       id: user.id,
       username: user.login,
       hireable: user.hireable === true,
-      badge: user.hireable ? badges.yes : badges.no
+      badge: user.hireable ? badges.yes : badges.no,
+      badge_style: _services.badge().style()
     }
   })
   .catch(e => {
     return {
       error: e.status,
       message: e.json ? e.json.message : e.message,
-      badge: badges.error
+      badge: badges.error,
+      badge_style: _services.badge().style()
     }
   })
 }
