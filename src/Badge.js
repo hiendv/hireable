@@ -3,100 +3,75 @@
 import fs from 'fs'
 import path from 'path'
 
-import Cache from './Cache'
-import GitHub from './GitHub'
-
-const STYLE_DIR = 'styles'
-const images = {
+const _IMAGES = {
   yes: 'yes.svg',
   no: 'no.svg',
   error: 'error.svg'
 }
+let _style
+let _directory
+let _sources = {}
 
-let sources = {}
-let style
-
-let services = {
-  github () {},
-  cache () {}
-}
-
-/**
- * @return void
- */
-let _styles = function () {
-  if (!process.env.APP_STYLE) {
-    style = 'default'
-  }
-
-  // Validate source existence
-  Object.keys(images).forEach(function (key) {
-    let image = images[key]
-    let imageSrc = path.join(__dirname, STYLE_DIR, style, image)
+let _loadSources = function () {
+  Object.keys(_IMAGES).forEach(function (key) {
+    let image = _IMAGES[key]
+    let imageSrc = path.join(__dirname, _directory, _style, image)
     fs.accessSync(imageSrc)
 
-    sources[key] = imageSrc
+    _sources[key] = imageSrc
   })
 }
 
-/**
- * @param  {String} username
- * @return {Promise}
- */
-let _user = function (username) {
-  return services.github.users(username).fetch()
-}
-
-/**
- * @param  {String} username
- * @return {Promise}
- */
-let _show = function (username) {
-  return _user.call(this, username).then(user => {
-    return {
-      id: user.id,
-      username: user.login,
-      hireable: user.hireable === true,
-      badge: user.hireable ? sources.yes : sources.no
-    }
-  })
-  .catch(e => {
-    return {
-      error: e.status,
-      message: e.json ? e.json.message : e.message,
-      badge: sources.error
-    }
-  })
-}
-
-let _init = function () {
-  services = {
-    cache: new Cache({
-      age: parseInt(process.env.APP_CACHE)
-    }),
-    github: new GitHub({
-      token: process.env.GITHUB_TOKEN
-    })
+let _styleInit = function (style) {
+  if (style) {
+    _style = style
+    return
   }
 
-  this.show = services.cache.rememberFunction(_show)
+  if (process.env.APP_STYLE) {
+    _style = process.env.APP_STYLE
+    return
+  }
 
-  _styles.call(this)
+  _style = 'default'
 }
 
-let Badge = function () {
-  _init.call(this)
+let _directoryInit = function (directory) {
+  if (directory) {
+    _directory = directory
+    return
+  }
+
+  if (process.env.APP_STYLE_DIR) {
+    _style = process.env.APP_STYLE_DIR
+    return
+  }
+
+  _directory = 'styles'
+}
+
+let Badge = function (style, directory) {
+  _styleInit.call(this, style)
+  _directoryInit.call(this, directory)
+  _loadSources.call(this)
 }
 
 Badge.prototype = {
-  show (username) {
-    _show.call(this, username)
+  all () {
+    return _sources
   },
-
+  dir () {
+    return _directory
+  },
+  style () {
+    return _style
+  },
+  images () {
+    return _IMAGES
+  },
   toString () {
     return '[Badge Object]'
   },
-
   inspect () {
     return this.toString()
   }

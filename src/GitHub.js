@@ -9,6 +9,12 @@ let GitHub = function (options) {
 GitHub.prototype = {
   users () {
     return this.instance.users.apply(this, arguments)
+  },
+  toString () {
+    return '[GitHub Object]'
+  },
+  inspect () {
+    return this.toString()
   }
 }
 
