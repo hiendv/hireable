@@ -24,9 +24,11 @@ Want to use this badge on your website? Here is the HTML version:
 You hate this style? Try others by modifying the URL of the badge as follow:
 ```
 http://hireable.me/<username>/<style>
-# Styles: default (null)
-# Others will be added soon
 ```
+
+#### Current supported styles
+- default (null)
+- Others will be added soon
 
 *`<username>` is a GitHub username*  
 *`<style>` is a supported style*
