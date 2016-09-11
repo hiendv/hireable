@@ -9,7 +9,7 @@ const Badge = muk('../src/Badge', {
   'fs': require('./mocks/fs.js')
 }).default
 
-describe('Badge tests', () => {
+describe('Badge', () => {
   let badge
   before(() => {
     badge = new Badge()

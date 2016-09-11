@@ -49,9 +49,9 @@ describe('GET /ghost', () => {
     })
   })
 
-  it('should return no', done => {
+  it('should have hireable header', done => {
     http.get(app.route('/ghost'), res => {
-      assert(res.headers['hireable'] === '0')
+      assert(res.headers['hireable'] === '0' || res.headers['hireable'] === '1')
       done()
     })
   })

@@ -11,7 +11,7 @@ const User = muk('../src/User', {
   './GitHub': require('./mocks/GitHub.js')
 }).default
 
-describe('User tests', () => {
+describe('User', () => {
   let user
   before(() => {
     user = new User(new Badge())

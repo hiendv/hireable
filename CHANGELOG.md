@@ -12,6 +12,7 @@ Changelog entries are classified using the following labels _(from [keep-a-chang
 ## [Unreleased]
 ### Added
 - Add `abort` helper inside `_dispatch` of `App`
+- Add `Hireable-Style` header
 
 ### Changed
 - Badge is injected by User constructor
