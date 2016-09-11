@@ -80,6 +80,9 @@ APP_CACHE=
 # Your badge style. Leave it null for `default` style
 APP_STYLE=
 
+# The directory containing styles. Leave it null to use `src/styles`
+APP_STYLE_DIR
+
 # GitHub personal access token. See https://github.com/settings/tokens
 GITHUB_TOKEN=PersonalAccessToken
 ```
@@ -100,4 +103,6 @@ npm run build && cd build
 ```bash
 npm test
 ```
-e2e test PRs are welcome!
+
+## Contribution
+Issues and PRs are welcome !
