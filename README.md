@@ -25,14 +25,12 @@ You hate this style? Try others by modifying the URL of the badge as follow:
 ```
 http://hireable.me/<username>/<style>
 ```
+*`<username>` is a GitHub username*  
+*`<style>` is a supported style*
 
 #### Current supported styles
 - default (null)
 - Others will be added soon
-
-*`<username>` is a GitHub username*  
-*`<style>` is a supported style*
-
 
 [hireable.me](http://hireable.me) is sponsored by [@nguyenph88](https://github.com/nguyenph88). Thank you so much for your contribution.
 
@@ -56,10 +54,10 @@ A: Your [GitHub jobs profile](https://github.com/settings/profile#user_profile_h
 A: GitHub has their own image proxy: [camo](https://help.github.com/articles/why-do-my-images-have-strange-urls/).
 
 ## Roadmap
-- [x] Customizable styles: [Released - v0.2.0](./CHANGELOG.md#v020---2016-09-03)
+- [x] [Customizable styles](https://github.com/hiendv/hireable/issues/7): [Released - v0.2.0](./CHANGELOG.md#v020---2016-09-03)
 - [ ] On-the-fly badges: Not implemented. See [#3 (comment)](https://github.com/hiendv/hireable/pull/3#issuecomment-242659951).
-- [ ] Styling using request parameters: Not implemented. See [#9 (comment)](https://github.com/hiendv/hireable/issues/9).
-- [x] Remove Koa & related libraries: [WIP - v0.3.0](https://github.com/hiendv/hireable/issues/11) & [develop branch](https://github.com/hiendv/hireable/tree/develop)
+- [x] [Remove Koa & related libraries]((https://github.com/hiendv/hireable/issues/11)): [Released - v0.3.0-rc.1](./CHANGELOG.md#v030-rc1---2016-09-08)
+- [x] [Styling using request parameters](https://github.com/hiendv/hireable/issues/9): [Implemented].
 
 ## Quickstart Installation
 - Download the latest release [here](https://github.com/hiendv/hireable/releases)
