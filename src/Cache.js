@@ -12,11 +12,16 @@ let Cache = function (options) {
 Cache.prototype = {
   rememberFunction (fn) {
     if (!this.options.maxAge) {
-      // Disabled
       return fn
     }
 
     return MemoizeeInstance.call(this, fn, this.options)
+  },
+  toString () {
+    return '[Cache Object]'
+  },
+  inspect () {
+    return this.toString()
   }
 }
 
