@@ -11,6 +11,7 @@ Changelog entries are classified using the following labels _(from [keep-a-chang
 
 ## [Unreleased]
 ### Added
+- Allow style to be set on demand: `/<username>/<style>`
 - Add `abort` helper inside `_dispatch` of `App`
 - Add `Hireable-Style` header
 
