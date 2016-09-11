@@ -13,9 +13,19 @@ Changelog entries are classified using the following labels _(from [keep-a-chang
 ### Added
 - Add `Hireable` header to badge response
 - Add some tests
+- Add mocks
+- Add `APP_STYLE_DIR` environment variable
+
+### Changed
+- Modulize `App` out of `index.js`
+- Separate `Badge` into `User` and `Badge`
+- Using mocks in tests instead of actual calls to GitHub API
+- Refactor classes
+- Allow badge directory and style to be set at run-time
 
 ### Fixed
-- Cast the value of user.hireable from Badge.show to boolean. `null` -> `false`
+- Replace multiple leading slashes by a single one
+- Cast the value of `user.hireable` from Badge.show to boolean. `null` -> `false`
 
 ## [v0.3.0-rc.1] - 2016-09-08
 ### Added
