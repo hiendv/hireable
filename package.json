@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "nodemon src/index.js --exec 'npm run lint && babel-node'",
     "test": "mocha --compilers js:babel-register",
-    "test-live": "nodemon test --exec 'npm run lint:test && npm run test'",
+    "test-live": "nodemon test --exec 'npm run lint:test && npm test'",
     "lint": "eslint --ext .js src build && npm run lint:test",
     "lint:test": "eslint --ext .js test",
     "serve": "node lib/index.js",
