@@ -55,4 +55,11 @@ describe('GET /ghost', () => {
       done()
     })
   })
+
+  it('should have hireable-style header', done => {
+    http.get(app.route('/ghost'), res => {
+      assert(res.headers['hireable-style'] === 'default')
+      done()
+    })
+  })
 })
