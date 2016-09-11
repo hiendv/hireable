@@ -88,7 +88,7 @@ GITHUB_TOKEN=PersonalAccessToken
 ```
 
 ## Development
-- C'mon, give it a :star:. Thank you :laughing:
+- But first, give me a :star:. Thank you :laughing:
 ```bash
 git clone https://github.com/hiendv/hireable.git && cd hireable
 npm install
