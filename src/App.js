@@ -19,6 +19,7 @@ const _ROUTES = {
           (new User(new Badge(params.style))).show(params.user).then(user => {
             response.setHeader('Cache-Control', 'private')
             response.setHeader('Hireable', ~~user.hireable) // Double bitwise NOT
+            response.setHeader('Hireable-Style', params.style)
             Send(request, user.badge).pipe(response)
           })
         } catch (error) {
