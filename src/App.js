@@ -12,7 +12,7 @@ import User from './User'
 const _ROUTES = {
   user () {
     return {
-      pattern: new Pattern('/:user'),
+      pattern: new Pattern('(/*):user(/)'),
       then (request, response, params) {
         (new User()).show(params.user).then(user => {
           response.setHeader('Cache-Control', 'private')
@@ -24,7 +24,7 @@ const _ROUTES = {
   },
   profile () {
     return {
-      pattern: new Pattern('/p/:user'),
+      pattern: new Pattern('(/*)p/:user(/)'),
       then (request, response, params) {
         response.writeHead(302, {
           'Location': 'https://github.com/' + params.user
@@ -43,10 +43,6 @@ let _dispatch = function (request, response) {
   }
 
   let parts = url.parse(request.url)
-
-  if (parts.pathname) {
-    parts.pathname = parts.pathname.replace(/^[\/]+/g, '/')
-  }
 
   if (parts.pathname === '/favicon.ico') {
     response.writeHead(404)
