@@ -3,27 +3,27 @@
 
 Available-for-hire badge built with [Koa framework](https://github.com/koajs/koa)
 
-[![Is hiendv available for hire?](http://hireable.me/hiendv)](http://hireable.me/p/hiendv)
+[![Is hiendv available for hire?](https://hireable.me/hiendv)](https://hireable.me/p/hiendv)
 
 ## Usage
 
 Copy this code and paste it into **README** (or **README.md**) in your project:
 
 ```
-[![Is <username> available for hire?](http://hireable.me/<username>)](http://hireable.me/p/<username>)
+[![Is <username> available for hire?](https://hireable.me/<username>)](https://hireable.me/p/<username>)
 ```
 
 Want to use this badge on your website? Here is the HTML version:
 
 ```
-<a href="http://hireable.me/p/<username>">
-  <img src="http://hireable.me/<username>" alt="Is <username> available for hire?" />
+<a href="https://hireable.me/p/<username>">
+  <img src="https://hireable.me/<username>" alt="Is <username> available for hire?" />
 </a>
 ```
 
 *`<username>` is a GitHub username*
 
-[hireable.me](http://hireable.me) is sponsored by [@nguyenph88](https://github.com/nguyenph88). Thank you so much for your contribution.
+[hireable.me](https://hireable.me) is sponsored by [@nguyenph88](https://github.com/nguyenph88). Thank you so much for your contribution.
 
 ## But why?
 Some of my friends want to embed the employment status into their open-source projects.
