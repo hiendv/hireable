@@ -37,8 +37,8 @@ http://hireable.me/<username>/<style>
 
 ## But why?
 Some of my friends want to embed the employment status into their open-source projects.
-But it takes too much time and effort to keep these information up-to-date across your projects.  
-I thought it would be much cooler to tell people whether you're hireable or not with a badge. Isn't it? :confused:
+But it takes too much time and effort to keep these information up-to-date across projects.  
+I thought it would be much cooler to tell people whether you're hireable or not with a badge.
 
 ## The badges
 #### Default
@@ -57,7 +57,7 @@ No on-the-fly generated badges for now, I guess. They are all pre-generated.
 - Q: **How do you know when I'm hireable?**  
 A: Your [GitHub jobs profile](https://github.com/settings/profile#user_profile_hireable)
 
-- Q: **The badge on hireable.me is updated by GitHub is showing the cached one.**  
+- Q: **The badge on hireable.me is updated but GitHub is showing the cached one.**  
 A: GitHub has their own image proxy: [camo](https://help.github.com/articles/why-do-my-images-have-strange-urls/).
 
 ## Roadmap
