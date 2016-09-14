@@ -10,7 +10,6 @@ let User = function () {
 
 User.prototype = {
   show (username) {
-    let self = this
     return (new GitHubMock()).users(username).fetch().then(user => {
       return {
         id: user.id,
