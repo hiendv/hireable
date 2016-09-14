@@ -30,6 +30,7 @@ http://hireable.me/<username>/<style>
 
 #### Current supported styles
 - default (null)
+- flat
 - Others will be added soon
 
 [hireable.me](http://hireable.me) is sponsored by [@nguyenph88](https://github.com/nguyenph88). Thank you so much for making it possible!
@@ -40,9 +41,15 @@ But it takes too much time and effort to keep these information up-to-date acros
 I thought it would be much cooler to tell people whether you're hireable or not with a badge. Isn't it? :confused:
 
 ## The badges
+#### Default
 ![Hireable](https://cdn.rawgit.com/hiendv/hireable/master/src/styles/default/yes.svg)
 ![Not hireable](https://cdn.rawgit.com/hiendv/hireable/master/src/styles/default/no.svg)
 ![Error](https://cdn.rawgit.com/hiendv/hireable/master/src/styles/default/error.svg)
+
+#### Flat
+![Hireable](https://cdn.rawgit.com/hiendv/hireable/master/src/styles/flat/yes.svg)
+![Not hireable](https://cdn.rawgit.com/hiendv/hireable/master/src/styles/flat/no.svg)
+![Error](https://cdn.rawgit.com/hiendv/hireable/master/src/styles/flat/error.svg)
 
 I was too lazy to implement [badges/shields specification](https://github.com/badges/shields/blob/master/spec/SPECIFICATION.md)  
 No on-the-fly generated badges for now, I guess. They are all pre-generated. 

@@ -14,6 +14,7 @@ Changelog entries are classified using the following labels _(from [keep-a-chang
 - Allow style to be set on demand: `/<username>/<style>`
 - Add `abort` helper inside `_dispatch` of `App`
 - Add `Hireable-Style` header
+- Add `flat` style
 
 ### Changed
 - Badge is injected by User constructor
