@@ -64,7 +64,7 @@ A: GitHub has their own image proxy: [camo](https://help.github.com/articles/why
 - [x] [Customizable styles](https://github.com/hiendv/hireable/issues/7): [Released - v0.2.0](./CHANGELOG.md#v020---2016-09-03)
 - [ ] [On-the-fly badges](https://github.com/hiendv/hireable/pull/3#issuecomment-242659951): Not implemented
 - [x] [Remove Koa & related libraries](https://github.com/hiendv/hireable/issues/11): [Released - v0.3.0-rc.1](./CHANGELOG.md#v030-rc1---2016-09-08)
-- [x] [Styling using request parameters](https://github.com/hiendv/hireable/issues/9): [Implemented]
+- [x] [Styling using request parameters](https://github.com/hiendv/hireable/issues/9): [Released - v0.3.0-rc.3](./CHANGELOG.md#v030-rc3---2016-09-14)
 
 ## Quickstart Installation
 - Download the latest release [here](https://github.com/hiendv/hireable/releases)
