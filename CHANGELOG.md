@@ -20,9 +20,13 @@ Changelog entries are classified using the following labels _(from [keep-a-chang
 - Badge is injected by User constructor
 - Refactor `src/` & tests
 
+### Removed
+- Remove `test:live` and merge `lint:test` to `lint`
+
 ### Fixed
 - Fix URL patterns to allow multiple leading & following `/`
 - Pass `scope` to `Cache.rememberFunction` as the second parameter
+
 
 ## [v0.3.0-rc.2] - 2016-09-11
 ### Added
