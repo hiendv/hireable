@@ -10,6 +10,8 @@ Changelog entries are classified using the following labels _(from [keep-a-chang
 - `fixed`: for any bug fixes
 
 ## [Unreleased]
+
+## [v0.3.0-rc.3] - 2016-09-14
 ### Added
 - Allow style to be set on demand: `/<username>/<style>`
 - Add `abort` helper inside `_dispatch` of `App`
@@ -26,7 +28,6 @@ Changelog entries are classified using the following labels _(from [keep-a-chang
 ### Fixed
 - Fix URL patterns to allow multiple leading & following `/`
 - Pass `scope` to `Cache.rememberFunction` as the second parameter
-
 
 ## [v0.3.0-rc.2] - 2016-09-11
 ### Added
