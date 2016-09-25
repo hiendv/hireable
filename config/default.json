@@ -1,0 +1,23 @@
+{
+    "Hireable": {
+        "port": "1406"
+    },
+    "GitHub": {
+        "token": ""
+    },
+    "Cache": {
+        "maxAge": 0,
+        "promise": true
+    },
+    "Badge": {
+        "images": {
+            "yes": "yes.svg",
+            "no": "no.svg",
+            "error": "error.svg"
+        },
+        "style": "default",
+        "directory": "../styles"
+    },
+    "User": {
+    }
+}
