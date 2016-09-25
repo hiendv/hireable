@@ -3,6 +3,7 @@
 'use strict'
 
 import config from 'config'
+
 import Cache from './Cache'
 import GitHub from './GitHub'
 import User from './models/User'
