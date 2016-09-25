@@ -5,8 +5,7 @@
 import path from 'path'
 import fs from 'fs'
 
-// Abstract
-class Badge {
+class AbstractBadge {
 
   directory: string
   style: string
@@ -14,7 +13,7 @@ class Badge {
   src: string
 
   constructor (directory: string, style: string, preset: Object) {
-    if (this.constructor === Badge) {
+    if (this.constructor === AbstractBadge) {
       throw new TypeError('Can not construct abstract class.')
     }
     this.directory = directory
@@ -29,4 +28,4 @@ class Badge {
   }
 }
 
-export default Badge
+export default AbstractBadge

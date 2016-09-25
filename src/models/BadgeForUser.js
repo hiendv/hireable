@@ -2,10 +2,10 @@
 
 'use strict'
 
-import Badge from './Badge'
+import AbstractBadge from './AbstractBadge'
 import User from './User'
 
-class BadgeForUser extends Badge {
+class BadgeForUser extends AbstractBadge {
 
   user: User
   hireable: boolean

@@ -2,9 +2,9 @@
 
 'use strict'
 
-import Badge from './Badge'
+import AbstractBadge from './AbstractBadge'
 
-class BadgeForError extends Badge {
+class BadgeForError extends AbstractBadge {
 
   error: Error
   message: string
