@@ -10,6 +10,18 @@ Changelog entries are classified using the following labels _(from [keep-a-chang
 - `fixed`: for any bug fixes
 
 ## [Unreleased]
+### Added
+- Add `config`
+- Add `Hireable-Error` header
+
+### Changed
+- Mass refactoring `src/`. Decoupling, making them more OO & structuring them into MVC.
+- Add [Flow](https://github.com/facebook/flow) type-checked. Typescript will be considered later.
+- Move `styles`  to root
+
+### Removed
+- Remove `dotenv`
+- Remove `abort` helper
 
 ## [v0.3.0-rc.3] - 2016-09-14
 ### Added
