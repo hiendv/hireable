@@ -21,9 +21,13 @@ class AbstractBadge {
     this.preset = preset
   }
 
+  validateSrc (src: string): void {
+    fs.accessSync(src)
+  }
+
   realSrc (src: string): string {
     let source = path.join(this.directory, src)
-    fs.accessSync(source)
+    this.validateSrc(source)
     return source
   }
 }
