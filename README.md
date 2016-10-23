@@ -42,14 +42,14 @@ I thought it would be much cooler to tell people whether you're hireable or not 
 
 ## The badges
 #### Default
-![Hireable](https://cdn.rawgit.com/hiendv/hireable/master/src/styles/default/yes.svg)
-![Not hireable](https://cdn.rawgit.com/hiendv/hireable/master/src/styles/default/no.svg)
-![Error](https://cdn.rawgit.com/hiendv/hireable/master/src/styles/default/error.svg)
+![Hireable](https://cdn.rawgit.com/hiendv/hireable/master/styles/default/yes.svg)
+![Not hireable](https://cdn.rawgit.com/hiendv/hireable/master/styles/default/no.svg)
+![Error](https://cdn.rawgit.com/hiendv/hireable/master/styles/default/error.svg)
 
 #### Flat
-![Hireable](https://cdn.rawgit.com/hiendv/hireable/master/src/styles/flat/yes.svg)
-![Not hireable](https://cdn.rawgit.com/hiendv/hireable/master/src/styles/flat/no.svg)
-![Error](https://cdn.rawgit.com/hiendv/hireable/master/src/styles/flat/error.svg)
+![Hireable](https://cdn.rawgit.com/hiendv/hireable/master/styles/flat/yes.svg)
+![Not hireable](https://cdn.rawgit.com/hiendv/hireable/master/styles/flat/no.svg)
+![Error](https://cdn.rawgit.com/hiendv/hireable/master/styles/flat/error.svg)
 
 [badges/shields Specification](https://github.com/badges/shields/blob/master/spec/SPECIFICATION.md) is no longer on our road map. All styles are pre-generated.  
 
