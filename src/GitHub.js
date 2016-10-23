@@ -1,13 +1,22 @@
+// @flow
+
 'use strict'
 
+import config from 'config'
 import Octokat from 'octokat'
 
-let GitHub = function (options) {
-  this.instance = new Octokat(options)
-}
-GitHub.prototype = {
+class GitHub {
+
+  _options: Object
+  _instance: Object
+
+  constructor () {
+    this._options = config.get('GitHub')
+    this._instance = new Octokat(this._options)
+  }
+
   users () {
-    return this.instance.users.apply(this, arguments)
+    return this._instance.users.apply(this, arguments)
   }
 }
 
