@@ -1,7 +1,9 @@
 # hireable
 [![Build Status](https://travis-ci.org/hiendv/hireable.svg?branch=master)](https://travis-ci.org/hiendv/hireable) [![bitHound Dependencies](https://www.bithound.io/github/hiendv/hireable/badges/dependencies.svg)](https://www.bithound.io/github/hiendv/hireable/master/dependencies/npm) [![bitHound Dev Dependencies](https://www.bithound.io/github/hiendv/hireable/badges/devDependencies.svg)](https://www.bithound.io/github/hiendv/hireable/master/dependencies/npm) [![bitHound Code](https://www.bithound.io/github/hiendv/hireable/badges/code.svg)](https://www.bithound.io/github/hiendv/hireable)
 
-Available-for-hire badge built with :coffee: (*babel, mocha, sinon, flow, etc*)
+Available-for-hire badge built with tremendous help from [these guys](https://github.com/hiendv/hireable/graphs/contributors) and :coffee:  
+[hireable.me](http://hireable.me) is sponsored by [@nguyenph88](https://github.com/nguyenph88). Thank you so much for making it possible!  
+
 [![Is hiendv available for hire?](http://hireable.me/hiendv)](http://hireable.me/p/hiendv)
 
 ## Usage
@@ -31,8 +33,6 @@ http://hireable.me/<username>/<style>
 - default (null)
 - flat
 - Others will be added soon
-
-[hireable.me](http://hireable.me) is sponsored by [@nguyenph88](https://github.com/nguyenph88). Thank you so much for making it possible!
 
 ## But why?
 Some of my friends want to embed the employment status into their open-source projects.
