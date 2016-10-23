@@ -8,7 +8,10 @@
     "test": "mocha --compilers js:babel-register",
     "lint": "eslint --ext .js src build test",
     "serve": "node lib/index.js",
-    "build": "shx rm -rf lib && babel src -d lib && shx cp -r src/styles lib/. && node build/build.js",
+    "clean": "shx rm -rf lib",
+    "babelify": "babel src -d lib",
+    "styling": "shx cp -r styles lib/.",
+    "build": "npm run clean && npm run lint && npm run babelify && npm run styling && node build/build.js",
     "flow": "flow; test $? -eq 0 -o $? -eq 2"
   },
   "private": true,
@@ -45,6 +48,7 @@
     "flow-bin": "^0.32.0",
     "mocha": "^3.0.2",
     "nodemon": "^1.10.0",
-    "shx": "^0.1.4"
+    "shx": "^0.1.4",
+    "sinon": "^1.17.6"
   }
 }
