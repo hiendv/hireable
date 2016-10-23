@@ -5,13 +5,14 @@
   "main": "lib/index.js",
   "scripts": {
     "dev": "nodemon src/index.js --exec 'npm run flow && npm run lint && babel-node'",
+    "babelify": "babel src -d lib",
     "test": "mocha --compilers js:babel-register",
     "lint": "eslint --ext .js src build test",
     "serve": "node lib/index.js",
     "clean": "shx rm -rf lib",
-    "babelify": "babel src -d lib",
     "styling": "shx cp -r styles lib/.",
-    "build": "npm run clean && npm run lint && npm run babelify && npm run styling && node build/build.js",
+    "config": "shx cp -r config lib/.",
+    "build": "npm run clean && npm run lint && npm run babelify && npm run styling && npm run config && node build/build.js",
     "flow": "flow; test $? -eq 0 -o $? -eq 2"
   },
   "private": true,
