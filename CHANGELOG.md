@@ -9,6 +9,13 @@ Changelog entries are classified using the following labels _(from [keep-a-chang
 - `removed`: for deprecated features removed in this release
 - `fixed`: for any bug fixes
 
+## [v0.3.0] - 2016-10-23
+### Added
+- Add david-dm badges
+
+### Changed
+- Update README
+
 ## [v0.3.0-rc.5] - 2016-10-23
 ### Changed
 - Move `styles` & `config`  to root
@@ -140,7 +147,8 @@ Changelog entries are classified using the following labels _(from [keep-a-chang
 ### Added
 - First release
 
-[Unreleased]: https://github.com/hiendv/hireable/compare/v0.3.0-rc.5...HEAD
+[Unreleased]: https://github.com/hiendv/hireable/compare/v0.3.0...HEAD
+[v0.3.0]: https://github.com/hiendv/hireable/compare/v0.3.0-rc.5...v0.3.0
 [v0.3.0-rc.5]: https://github.com/hiendv/hireable/compare/v0.3.0-rc.4...v0.3.0-rc.5
 [v0.3.0-rc.4]: https://github.com/hiendv/hireable/compare/v0.3.0-rc.3...v0.3.0-rc.4
 [v0.3.0-rc.3]: https://github.com/hiendv/hireable/compare/v0.3.0-rc.2...v0.3.0-rc.3
