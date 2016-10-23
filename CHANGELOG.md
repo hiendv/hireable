@@ -9,10 +9,11 @@ Changelog entries are classified using the following labels _(from [keep-a-chang
 - `removed`: for deprecated features removed in this release
 - `fixed`: for any bug fixes
 
-## [Unreleased]
+## [v0.3.0-rc.4] - 2016-10-23
 ### Added
 - Add `config`
 - Add `Hireable-Error` header
+- Add Sinon.JS
 
 ### Changed
 - Mass refactoring `src/`. Decoupling, making them more OO & structuring them into MVC.
@@ -132,7 +133,8 @@ Changelog entries are classified using the following labels _(from [keep-a-chang
 ### Added
 - First release
 
-[Unreleased]: https://github.com/hiendv/hireable/compare/v0.3.0-rc.3...HEAD
+[Unreleased]: https://github.com/hiendv/hireable/compare/v0.3.0-rc.4...HEAD
+[v0.3.0-rc.4]: https://github.com/hiendv/hireable/compare/v0.3.0-rc.3...v0.3.0-rc.4
 [v0.3.0-rc.3]: https://github.com/hiendv/hireable/compare/v0.3.0-rc.2...v0.3.0-rc.3
 [v0.3.0-rc.2]: https://github.com/hiendv/hireable/compare/v0.3.0-rc.1...v0.3.0-rc.2
 [v0.3.0-rc.1]: https://github.com/hiendv/hireable/compare/v0.2.1...v0.3.0-rc.1
