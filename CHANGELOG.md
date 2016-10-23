@@ -9,6 +9,13 @@ Changelog entries are classified using the following labels _(from [keep-a-chang
 - `removed`: for deprecated features removed in this release
 - `fixed`: for any bug fixes
 
+## [v0.3.0-rc.5] - 2016-10-23
+### Changed
+- Move `styles` & `config`  to root
+
+### Removed
+- Remove `styling` & `config` scripts
+
 ## [v0.3.0-rc.4] - 2016-10-23
 ### Added
 - Add `config`
@@ -133,7 +140,8 @@ Changelog entries are classified using the following labels _(from [keep-a-chang
 ### Added
 - First release
 
-[Unreleased]: https://github.com/hiendv/hireable/compare/v0.3.0-rc.4...HEAD
+[Unreleased]: https://github.com/hiendv/hireable/compare/v0.3.0-rc.5...HEAD
+[v0.3.0-rc.5]: https://github.com/hiendv/hireable/compare/v0.3.0-rc.4...v0.3.0-rc.5
 [v0.3.0-rc.4]: https://github.com/hiendv/hireable/compare/v0.3.0-rc.3...v0.3.0-rc.4
 [v0.3.0-rc.3]: https://github.com/hiendv/hireable/compare/v0.3.0-rc.2...v0.3.0-rc.3
 [v0.3.0-rc.2]: https://github.com/hiendv/hireable/compare/v0.3.0-rc.1...v0.3.0-rc.2
