@@ -1,6 +1,6 @@
 {
   "name": "hireable",
-  "version": "0.3.0-rc.5",
+  "version": "0.3.0",
   "description": "Available-for-hire badge",
   "main": "lib/index.js",
   "scripts": {
