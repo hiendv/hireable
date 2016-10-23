@@ -10,9 +10,7 @@
     "lint": "eslint --ext .js src build test",
     "serve": "node lib/index.js",
     "clean": "shx rm -rf lib",
-    "styling": "shx cp -r styles lib/.",
-    "config": "shx cp -r config lib/.",
-    "build": "npm run clean && npm run lint && npm run babelify && npm run styling && npm run config && node build/build.js",
+    "build": "npm run clean && npm run lint && npm run babelify && node build/build.js",
     "flow": "flow; test $? -eq 0 -o $? -eq 2"
   },
   "private": true,
